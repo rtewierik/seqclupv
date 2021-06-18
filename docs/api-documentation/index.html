@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>API documentation - SeqCluPV</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">SeqCluPV</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./index.html">API documentation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#seqclupv">seqclupv</a></li>
+        <li class="main "><a href="#seqclupvdata">seqclupv.data</a></li>
+        <li class="main "><a href="#seqclupvlibrary">seqclupv.library</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generator">seqclupv.library.data_generator</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generatorhandwritten_character_generator">seqclupv.library.data_generator.handwritten_character_generator</a></li>
+            <li><a href="#parsefile">parseFile</a></li>
+            <li><a href="#handwrittencharactergenerator-objects">HandwrittenCharacterGenerator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generatorpebble_generator">seqclupv.library.data_generator.pebble_generator</a></li>
+            <li><a href="#gesturepebblegenerator-objects">GesturePebbleGenerator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generatorplaid_generator">seqclupv.library.data_generator.plaid_generator</a></li>
+            <li><a href="#plaidgenerator-objects">PLAIDGenerator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generatorsine_curve_generator">seqclupv.library.data_generator.sine_curve_generator</a></li>
+            <li><a href="#curvegenerator-objects">CurveGenerator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_generatortime_series_classification_base">seqclupv.library.data_generator.time_series_classification_base</a></li>
+            <li><a href="#timeseriesclassificationbase-objects">TimeSeriesClassificationBase Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_source">seqclupv.library.data_source</a></li>
+        <li class="main "><a href="#seqclupvlibrarydata_sourcefake_data_source">seqclupv.library.data_source.fake_data_source</a></li>
+            <li><a href="#fakedatasource-objects">FakeDataSource Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarydistance">seqclupv.library.distance</a></li>
+        <li class="main "><a href="#seqclupvlibrarydistancedynamic_time_warping">seqclupv.library.distance.dynamic_time_warping</a></li>
+            <li><a href="#dynamictimewarping-objects">DynamicTimeWarping Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryevaluation">seqclupv.library.evaluation</a></li>
+        <li class="main "><a href="#seqclupvlibraryevaluationbasic_baseline_prototypes">seqclupv.library.evaluation.basic_baseline_prototypes</a></li>
+            <li><a href="#basicbaselineprototypes-objects">BasicBaselinePrototypes Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryevaluationbasic_evaluator">seqclupv.library.evaluation.basic_evaluator</a></li>
+            <li><a href="#basicevaluator-objects">BasicEvaluator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryheuristics">seqclupv.library.heuristics</a></li>
+        <li class="main "><a href="#seqclupvlibraryheuristicslinear_prototype_value">seqclupv.library.heuristics.linear_prototype_value</a></li>
+            <li><a href="#linearprototypevalue-objects">LinearPrototypeValue Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfaces">seqclupv.library.interfaces</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesbaseline_prototypes">seqclupv.library.interfaces.baseline_prototypes</a></li>
+            <li><a href="#ibaselineprototypes-objects">IBaselinePrototypes Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacescandidate_store">seqclupv.library.interfaces.candidate_store</a></li>
+            <li><a href="#icandidatestore-objects">ICandidateStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesdata_generator">seqclupv.library.interfaces.data_generator</a></li>
+            <li><a href="#idatagenerator-objects">IDataGenerator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesdata_source">seqclupv.library.interfaces.data_source</a></li>
+            <li><a href="#idatasource-objects">IDataSource Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesdistance_measure">seqclupv.library.interfaces.distance_measure</a></li>
+            <li><a href="#idistancemeasure-objects">IDistanceMeasure Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesevaluator">seqclupv.library.interfaces.evaluator</a></li>
+            <li><a href="#ievaluator-objects">IEvaluator Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesfake_data_source">seqclupv.library.interfaces.fake_data_source</a></li>
+            <li><a href="#ifakedatasource-objects">IFakeDataSource Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesheuristics">seqclupv.library.interfaces.heuristics</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesheuristicsprototype_value">seqclupv.library.interfaces.heuristics.prototype_value</a></li>
+            <li><a href="#iprototypevalue-objects">IPrototypeValue Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryinterfacesseqclu">seqclupv.library.interfaces.seqclu</a></li>
+            <li><a href="#iseqclu-objects">ISeqClu Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarystorage">seqclupv.library.storage</a></li>
+        <li class="main "><a href="#seqclupvlibrarystoragecandidates">seqclupv.library.storage.candidates</a></li>
+            <li><a href="#candidatestore-objects">CandidateStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarystoragecluster">seqclupv.library.storage.cluster</a></li>
+            <li><a href="#clusterstore-objects">ClusterStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarystorageprototypes">seqclupv.library.storage.prototypes</a></li>
+            <li><a href="#prototypestore-objects">PrototypeStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarystorageprototype_frequencies">seqclupv.library.storage.prototype_frequencies</a></li>
+            <li><a href="#prototypefrequencystore-objects">PrototypeFrequencyStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibrarystoragesequences">seqclupv.library.storage.sequences</a></li>
+            <li><a href="#sequencestore-objects">SequenceStore Objects</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilities">seqclupv.library.utilities</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilitiescalculate_f1_score">seqclupv.library.utilities.calculate_f1_score</a></li>
+            <li><a href="#calculate_f1_score">calculate_f1_score</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilitiesconstruct_stream">seqclupv.library.utilities.construct_stream</a></li>
+            <li><a href="#constructstream">constructStream</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilitieshash_filter">seqclupv.library.utilities.hash_filter</a></li>
+            <li><a href="#ishashinkey">isHashInKey</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilitieshash_sequence">seqclupv.library.utilities.hash_sequence</a></li>
+            <li><a href="#hashsequence">hashSequence</a></li>
+        <li class="main "><a href="#seqclupvlibraryutilitiesstatistical_testing">seqclupv.library.utilities.statistical_testing</a></li>
+            <li><a href="#statistical_test">statistical_test</a></li>
+            <li><a href="#main">main</a></li>
+        <li class="main "><a href="#seqclupvlibraryvisualization">seqclupv.library.visualization</a></li>
+        <li class="main "><a href="#seqclupvlibraryvisualizationvisualizer">seqclupv.library.visualization.visualizer</a></li>
+            <li><a href="#visualizer-objects">Visualizer Objects</a></li>
+        <li class="main "><a href="#seqclupvseqclu">seqclupv.SeqClu</a></li>
+            <li><a href="#seqclu-objects">SeqClu Objects</a></li>
+        <li class="main "><a href="#seqclupvseqclubaselineoffline">seqclupv.SeqCluBaselineOffline</a></li>
+            <li><a href="#seqclubaselineoffline-objects">SeqCluBaselineOffline Objects</a></li>
+        <li class="main "><a href="#seqclupvseqclubaselineonline">seqclupv.SeqCluBaselineOnline</a></li>
+            <li><a href="#seqclubaselineonline-objects">SeqCluBaselineOnline Objects</a></li>
+        <li class="main "><a href="#seqclupv__main__">seqclupv.__main__</a></li>
+            <li><a href="#arecurveparameters">areCurveParameters</a></li>
+            <li><a href="#arestringparameters">areStringParameters</a></li>
+            <li><a href="#areseqcluparameters">areSeqCluParameters</a></li>
+            <li><a href="#aretimeseriesclassificationparameters">areTimeSeriesClassificationParameters</a></li>
+            <li><a href="#parsebool">parseBool</a></li>
+            <li><a href="#main_1">main</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><a name="seqclupv"></a></p>
+<h1 id="seqclupv">seqclupv</h1>
+<p>This package is the top-level package of 'SeqClu'.</p>
+<p><a name="seqclupv.data"></a></p>
+<h1 id="seqclupvdata">seqclupv.data</h1>
+<p>This package contains three data sets, namely:
+1. GesturePebbleZ1 (http://www.timeseriesclassification.com/description.php?Dataset=GesturePebbleZ1)
+2. UJI Pen Characters (https://archive.ics.uci.edu/ml/datasets/UJI+Pen+Characters)
+3. PLAID (http://www.timeseriesclassification.com/description.php?Dataset=PLAID)</p>
+<p>Additionally, the package contains the original source code provided at the start of the project as a Jupyter
+Notebook.</p>
+<p><a name="seqclupv.library"></a></p>
+<h1 id="seqclupvlibrary">seqclupv.library</h1>
+<p>This package contains all source code that is used in the variants of the 'SeqClu' algorithm that are contained in
+this framework.</p>
+<p><a name="seqclupv.library.data_generator"></a></p>
+<h1 id="seqclupvlibrarydata_generator">seqclupv.library.data_generator</h1>
+<p>This package contains all implementations of data generators that are used to generate data that are passed into
+the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.data_generator.handwritten_character_generator"></a></p>
+<h1 id="seqclupvlibrarydata_generatorhandwritten_character_generator">seqclupv.library.data_generator.handwritten_character_generator</h1>
+<p>This module contains a class that is responsible for generating handwritten character data that are passed to the
+'SeqClu' algorithm.</p>
+<p>Link to the 'UJI Pen Character' data set
+https://archive.ics.uci.edu/ml/datasets/UJI+Pen+Characters</p>
+<p>NOTE: The characters that are contained in the data set are as follows.
+['C', 'U', 'V', 'W', 'S', 'O', '1', '2', '3', '5', '6', '8', '9']</p>
+<p><a name="seqclupv.library.data_generator.handwritten_character_generator.parseFile"></a></p>
+<h4 id="parsefile">parseFile</h4>
+<pre><code class="language-python">parseFile(lines: List[str]) -&gt; Dict[str, List[Tuple[int, int]]]
+</code></pre>
+<p>This method parses a file containing a data set of sequences. The lines in this file are processed in the
+method to obtain a dictionary in which the keys represent the name of some class and the values represent
+a list of sequences that belong to this class.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>lines</code>: The lines that are present in some file containing a data set of sequences.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary in which the keys represent the name of some class and the values represent
+a list of sequences that belong to this class.</p>
+<p><a name="seqclupv.library.data_generator.handwritten_character_generator.HandwrittenCharacterGenerator"></a></p>
+<h2 id="handwrittencharactergenerator-objects">HandwrittenCharacterGenerator Objects</h2>
+<pre><code class="language-python">class HandwrittenCharacterGenerator(IDataGenerator)
+</code></pre>
+<p><a name="seqclupv.library.data_generator.handwritten_character_generator.HandwrittenCharacterGenerator.__init__"></a></p>
+<h4 id="__init__">__init__</h4>
+<pre><code class="language-python"> | __init__(classes: List[chr], numPrototypes: int) -&gt; None
+</code></pre>
+<p>This method initializes the data generator with a given list of classes that the
+generated data set should contain.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>classes</code>: The classes that are present in the data set as a list of characters.</li>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.data_generator.handwritten_character_generator.HandwrittenCharacterGenerator.generateData"></a></p>
+<h4 id="generatedata">generateData</h4>
+<pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.data_generator.pebble_generator"></a></p>
+<h1 id="seqclupvlibrarydata_generatorpebble_generator">seqclupv.library.data_generator.pebble_generator</h1>
+<p>This module contains a class that is responsible for generating gesture pebble data that are passed to the
+'SeqClu' algorithm.</p>
+<p>Link to the 'GesturePebbleZ1' data set
+http://www.timeseriesclassification.com/description.php?Dataset=GesturePebbleZ1</p>
+<p><a name="seqclupv.library.data_generator.pebble_generator.GesturePebbleGenerator"></a></p>
+<h2 id="gesturepebblegenerator-objects">GesturePebbleGenerator Objects</h2>
+<pre><code class="language-python">class GesturePebbleGenerator(TimeSeriesClassificationBase)
+</code></pre>
+<p><a name="seqclupv.library.data_generator.pebble_generator.GesturePebbleGenerator.__init__"></a></p>
+<h4 id="__init___1">__init__</h4>
+<pre><code class="language-python"> | __init__(numPrototypes: int, computeDistances: bool) -&gt; None
+</code></pre>
+<p>This method initializes the data generator given the number of prototypes and a boolean value indicating
+whether or not the pair-wise distances between all items in the data set need to be computed. This
+data generator is applicable to the 'GesturePebbleZ1' data set.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between all
+items in the data set.</li>
+</ul>
+<p><a name="seqclupv.library.data_generator.pebble_generator.GesturePebbleGenerator.generateData"></a></p>
+<h4 id="generatedata_1">generateData</h4>
+<pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.data_generator.plaid_generator"></a></p>
+<h1 id="seqclupvlibrarydata_generatorplaid_generator">seqclupv.library.data_generator.plaid_generator</h1>
+<p>This module contains a class that is responsible for generating PLAID data that are passed to the
+'SeqClu' algorithm.</p>
+<p>Link to the 'PLAID' data set
+http://www.timeseriesclassification.com/description.php?Dataset=PLAID</p>
+<p><a name="seqclupv.library.data_generator.plaid_generator.PLAIDGenerator"></a></p>
+<h2 id="plaidgenerator-objects">PLAIDGenerator Objects</h2>
+<pre><code class="language-python">class PLAIDGenerator(TimeSeriesClassificationBase)
+</code></pre>
+<p><a name="seqclupv.library.data_generator.plaid_generator.PLAIDGenerator.__init__"></a></p>
+<h4 id="__init___2">__init__</h4>
+<pre><code class="language-python"> | __init__(numPrototypes: int, computeDistances: bool) -&gt; None
+</code></pre>
+<p>This method initializes the data generator given the number of prototypes and a boolean value indicating
+whether or not the pair-wise distances between all items in the data set need to be computed. This
+data generator is applicable to the 'GesturePebbleZ1' data set.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between all
+items in the data set.</li>
+</ul>
+<p><a name="seqclupv.library.data_generator.plaid_generator.PLAIDGenerator.generateData"></a></p>
+<h4 id="generatedata_2">generateData</h4>
+<pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator"></a></p>
+<h1 id="seqclupvlibrarydata_generatorsine_curve_generator">seqclupv.library.data_generator.sine_curve_generator</h1>
+<p>This module contains a class that is responsible for generating data from a sine curve that are passed to the
+'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator"></a></p>
+<h2 id="curvegenerator-objects">CurveGenerator Objects</h2>
+<pre><code class="language-python">class CurveGenerator(IDataGenerator)
+</code></pre>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.error"></a></p>
+<h4 id="error">error</h4>
+<pre><code class="language-python"> | @property
+ | error() -&gt; float
+</code></pre>
+<p>This property stores the error factor that is used to add
+noise to the sine curve with a random number generator.</p>
+<p><strong>Returns</strong>:</p>
+<p>A float representing the error factor.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.freq"></a></p>
+<h4 id="freq">freq</h4>
+<pre><code class="language-python"> | @property
+ | freq() -&gt; Tuple[float, float]
+</code></pre>
+<p>This property stores the lower and upper bound used to draw a sample from a uniform distribution that
+will be used as the frequency.</p>
+<p><strong>Returns</strong>:</p>
+<p>Two floats representing the lower and upper bound used to draw a sample from a uniform distribution
+that will be used as the frequency.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.n"></a></p>
+<h4 id="n">n</h4>
+<pre><code class="language-python"> | @property
+ | n() -&gt; int
+</code></pre>
+<p>This property stores the number of sequences that should be generated.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer that represents the number of sequences that should be generated.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.phase"></a></p>
+<h4 id="phase">phase</h4>
+<pre><code class="language-python"> | @property
+ | phase() -&gt; int
+</code></pre>
+<p>This property stores the phase that is used to generate the sine curve.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer that represents the phase that is used to generate the sine curve.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.samplingRate"></a></p>
+<h4 id="samplingrate">samplingRate</h4>
+<pre><code class="language-python"> | @property
+ | samplingRate() -&gt; int
+</code></pre>
+<p>Defines how the rate at which samples are generated. The higher the value, the fewer samples are generated.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the rate at which samples are generated.</p>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.__init__"></a></p>
+<h4 id="__init___3">__init__</h4>
+<pre><code class="language-python"> | __init__(n: int, freq: Tuple[float, float], samplingRate: int, error: float, phase: int) -&gt; None
+</code></pre>
+<p>This method initializes the data generator that is applicable to the sine curve data set with the parameters
+that are required to generate the data set.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>n</code>: The amount of samples that are generated.</li>
+<li><code>freq</code>: The lower and upper bound of the distribution that generates the frequency of a sample.</li>
+<li><code>samplingRate</code>: The rate at which samples are generated.</li>
+<li><code>error</code>: The error factor used to add noise to samples.</li>
+<li><code>phase</code>: The phase that is used to generate the sine curve.</li>
+</ul>
+<p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.generateData"></a></p>
+<h4 id="generatedata_3">generateData</h4>
+<pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.data_generator.time_series_classification_base"></a></p>
+<h1 id="seqclupvlibrarydata_generatortime_series_classification_base">seqclupv.library.data_generator.time_series_classification_base</h1>
+<p>This module contains a base class that is responsible for generating time series data from
+https://www.timeseriesclassification.com that are passed to the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase"></a></p>
+<h2 id="timeseriesclassificationbase-objects">TimeSeriesClassificationBase Objects</h2>
+<pre><code class="language-python">class TimeSeriesClassificationBase(IDataGenerator,  ABC)
+</code></pre>
+<p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase.loadData"></a></p>
+<h4 id="loaddata">loadData</h4>
+<pre><code class="language-python"> | @staticmethod
+ | loadData(path: str, filenames: List[str]) -&gt; Tuple[List[ndarray], List[str]]
+</code></pre>
+<p>This method loads the data from a given path to some directory and file name.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>path</code>: The path to some directory, relative to the current working directory.</li>
+<li><code>filenames</code>: The names of the files that should be loaded.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The data that was loaded from all of the files.</p>
+<p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase.computeDistances"></a></p>
+<h4 id="computedistances">computeDistances</h4>
+<pre><code class="language-python"> | @property
+ | computeDistances() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the pair-wise distances between items in the
+data set should be computed.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the pair-wise distances between items in the
+data set should be computed.</p>
+<p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase.__init__"></a></p>
+<h4 id="__init___4">__init__</h4>
+<pre><code class="language-python"> | __init__(numPrototypes: int, computeDistances: bool) -&gt; None
+</code></pre>
+<p>This method initializes the data generator given the number of prototypes that are drawn from the data set
+and a boolean value indicating whether or not the pair-wise distances between items in the data set should
+be computed.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numPrototypes</code>: The number of prototypes that should be drawn from the data set.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between items in
+the data set should be computed.</li>
+</ul>
+<p><a name="seqclupv.library.data_source"></a></p>
+<h1 id="seqclupvlibrarydata_source">seqclupv.library.data_source</h1>
+<p>This package contains all implementations of data sources that are used by the 'SeqClu' algorithm to request
+data at every tick.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source"></a></p>
+<h1 id="seqclupvlibrarydata_sourcefake_data_source">seqclupv.library.data_source.fake_data_source</h1>
+<p>This module contains an implementation of a fake data source that feeds a random number of elements of a predefined
+data set to the 'SeqClu' algorithm at every tick.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource"></a></p>
+<h2 id="fakedatasource-objects">FakeDataSource Objects</h2>
+<pre><code class="language-python">class FakeDataSource(IFakeDataSource,  IDataGenerator)
+</code></pre>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.combineGeneratedData"></a></p>
+<h4 id="combinegenerateddata">combineGeneratedData</h4>
+<pre><code class="language-python"> | @staticmethod
+ | combineGeneratedData(clusters: List[List[Union[ndarray, list]]], classes: List[Union[int, chr]], numPrototypes: int) -&gt; tuple
+</code></pre>
+<p>This method combines the data that were generated from multiple data sources into one data stream.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>clusters</code>: The logical clusters with all the different classes for all the data generators.</li>
+<li><code>classes</code>: All the classes that should be present in the data provided by the data source.</li>
+<li><code>numPrototypes</code>: The number of prototypes used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The class dictionary, indices, labels and pair-wise distances of the data,
+as well as the data itself</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.actualLabels"></a></p>
+<h4 id="actuallabels">actualLabels</h4>
+<pre><code class="language-python"> | @property
+ | actualLabels() -&gt; Optional[Dict[str, Union[chr, int]]]
+</code></pre>
+<p>This property stores the correct labels of the data in the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>The correct labels of the data in the data set.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.classes"></a></p>
+<h4 id="classes">classes</h4>
+<pre><code class="language-python"> | @property
+ | classes() -&gt; List[Union[chr, int]]
+</code></pre>
+<p>This property stores all the classes that are present in the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>All the classes that are present in the data set.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.currentIndex"></a></p>
+<h4 id="currentindex">currentIndex</h4>
+<pre><code class="language-python"> | @property
+ | currentIndex() -&gt; int
+</code></pre>
+<p>This property stores the current index of the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the current index of the data provided by the data source.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.currentTick"></a></p>
+<h4 id="currenttick">currentTick</h4>
+<pre><code class="language-python"> | @property
+ | currentTick() -&gt; int
+</code></pre>
+<p>This property stores the current tick of the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the current tick of the algorithm.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.data"></a></p>
+<h4 id="data">data</h4>
+<pre><code class="language-python"> | @property
+ | data() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This property stores the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>The data provided by the data source.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.dataSize"></a></p>
+<h4 id="datasize">dataSize</h4>
+<pre><code class="language-python"> | @property
+ | dataSize() -&gt; Optional[int]
+</code></pre>
+<p>This property stores the amount of data that are provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the amount of data that are provided by the data source.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.dataGenerators"></a></p>
+<h4 id="datagenerators">dataGenerators</h4>
+<pre><code class="language-python"> | @property
+ | dataGenerators() -&gt; List[IDataGenerator]
+</code></pre>
+<p>This property stores the data generators that are used to generate the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of data generators that are used to generate the data provided by the data source.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.maxPerTick"></a></p>
+<h4 id="maxpertick">maxPerTick</h4>
+<pre><code class="language-python"> | @property
+ | maxPerTick() -&gt; int
+</code></pre>
+<p>This property stores the maximum number of data that can be provided by the data source per tick.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the maximum number of data
+that can be provided by the data source per tick.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.numClasses"></a></p>
+<h4 id="numclasses">numClasses</h4>
+<pre><code class="language-python"> | @property
+ | numClasses() -&gt; int
+</code></pre>
+<p>The number of classes that are present in the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of classes that are
+present in the data provided by the data source.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.numPrototypes"></a></p>
+<h4 id="numprototypes">numPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numPrototypes() -&gt; int
+</code></pre>
+<p>The number of prototypes that are used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of prototypes that are used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.currentIndex"></a></p>
+<h4 id="currentindex_1">currentIndex</h4>
+<pre><code class="language-python"> | @currentIndex.setter
+ | currentIndex(value: int) -&gt; None
+</code></pre>
+<p>This is the setter for the 'currentIndex' property.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>value</code>: The value that the 'currentIndex' property needs to be set to.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.data"></a></p>
+<h4 id="data_1">data</h4>
+<pre><code class="language-python"> | @data.setter
+ | data(value: ndarray) -&gt; None
+</code></pre>
+<p>This is the setter for the 'data' property.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>value</code>: The value that the 'data' property needs to be set to.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.__init__"></a></p>
+<h4 id="__init___5">__init__</h4>
+<pre><code class="language-python"> | __init__(maxPerTick: int, dataGenerators: List[IDataGenerator], numPrototypes: int, classes: List[Union[chr, int]]) -&gt; None
+</code></pre>
+<p>This method initializes the data source given the maximum number of data per tick, the data generators
+that should be used to generate the data provided by the data source and the number of prototypes
+that is used in the 'SeqClu' algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>maxPerTick</code>: The maximum number of data that can be provided by the data source per tick.</li>
+<li><code>dataGenerators</code>: The data generators that should be used to
+generate the data provided by the data source.</li>
+<li><code>numPrototypes</code>: The number of prototypes that is used in the 'SeqClu' algorithm.</li>
+<li><code>classes</code>: All the classes that should be present in the data provided by the data source.</li>
+</ul>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.advanceTick"></a></p>
+<h4 id="advancetick">advanceTick</h4>
+<pre><code class="language-python"> | advanceTick() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method advances the state of the data source by one tick. The method returns a list of sequences
+that should be processed by the 'SeqClu' algorithm during the next tick.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of sequences that should be processed by the 'SeqClu' algorithm during the next tick.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.generateData"></a></p>
+<h4 id="generatedata_4">generateData</h4>
+<pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.reset"></a></p>
+<h4 id="reset">reset</h4>
+<pre><code class="language-python"> | reset() -&gt; None
+</code></pre>
+<p>This method sets the current index of the data provided by the data source back to zero to reset the
+data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.distance"></a></p>
+<h1 id="seqclupvlibrarydistance">seqclupv.library.distance</h1>
+<p>This package contains implementations of distance measures that are used in the 'SeqClu' algorithm to compute the
+distance between two incoming data points.</p>
+<p><a name="seqclupv.library.distance.dynamic_time_warping"></a></p>
+<h1 id="seqclupvlibrarydistancedynamic_time_warping">seqclupv.library.distance.dynamic_time_warping</h1>
+<p>This module contains an implementation of the 'Dynamic Time Warping' distance measure that is used in the 'SeqClu'
+algorithm to compute the distance between two sequences.</p>
+<p><a name="seqclupv.library.distance.dynamic_time_warping.DynamicTimeWarping"></a></p>
+<h2 id="dynamictimewarping-objects">DynamicTimeWarping Objects</h2>
+<pre><code class="language-python">class DynamicTimeWarping(IDistanceMeasure)
+</code></pre>
+<p><a name="seqclupv.library.distance.dynamic_time_warping.DynamicTimeWarping.timesCalled"></a></p>
+<h4 id="timescalled">timesCalled</h4>
+<pre><code class="language-python"> | @property
+ | timesCalled() -&gt; int
+</code></pre>
+<p>This property stores the counter on the amount of times that the distance measure is used to compute the
+distance between two sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the counter on the amount of times that the distance measure is used to
+compute the distance between two sequences.</p>
+<p><a name="seqclupv.library.distance.dynamic_time_warping.DynamicTimeWarping.__init__"></a></p>
+<h4 id="__init___6">__init__</h4>
+<pre><code class="language-python"> | __init__() -&gt; None
+</code></pre>
+<p>This method initializes the distance measure by setting the counter on the amount of times that the distance
+measure is used to compute the distance between two sequences to zero.</p>
+<p><a name="seqclupv.library.distance.dynamic_time_warping.DynamicTimeWarping.calculateDistance"></a></p>
+<h4 id="calculatedistance">calculateDistance</h4>
+<pre><code class="language-python"> | calculateDistance(sequenceOne: ndarray, sequenceTwo: ndarray) -&gt; float
+</code></pre>
+<p>This method calculates the distance between two sequences.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceOne</code>: The first sequence for which the distance should be computed.</li>
+<li><code>sequenceTwo</code>: The second sequence for which the distance should be computed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The distance between the two sequences.</p>
+<p><a name="seqclupv.library.distance.dynamic_time_warping.DynamicTimeWarping.reset"></a></p>
+<h4 id="reset_1">reset</h4>
+<pre><code class="language-python"> | reset() -&gt; None
+</code></pre>
+<p>This method resets the counter on the amount of times that the distance measure is used to compute the
+distance between two sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.evaluation"></a></p>
+<h1 id="seqclupvlibraryevaluation">seqclupv.library.evaluation</h1>
+<p>This package contains implementations of evaluators that can assess the performance of the variants of the 'SeqClu'
+algorithm.</p>
+<p><a name="seqclupv.library.evaluation.basic_baseline_prototypes"></a></p>
+<h1 id="seqclupvlibraryevaluationbasic_baseline_prototypes">seqclupv.library.evaluation.basic_baseline_prototypes</h1>
+<p>This module contains the class that stores the prototypes of some baseline. This class can be used
+to compare the prototypes obtained at the end of the online 'Seqclu' algorithm, where the number of identical
+prototypes divided by the total number of prototypes can be used as evaluation metric.</p>
+<p><a name="seqclupv.library.evaluation.basic_baseline_prototypes.BasicBaselinePrototypes"></a></p>
+<h2 id="basicbaselineprototypes-objects">BasicBaselinePrototypes Objects</h2>
+<pre><code class="language-python">class BasicBaselinePrototypes(IBaselinePrototypes)
+</code></pre>
+<p><a name="seqclupv.library.evaluation.basic_baseline_prototypes.BasicBaselinePrototypes.getPrototypes"></a></p>
+<h4 id="getprototypes">getPrototypes</h4>
+<pre><code class="language-python"> | @staticmethod
+ | getPrototypes(experimentName: str) -&gt; Optional[List[List[str]]]
+</code></pre>
+<p>This method returns the prototypes that were obtained after executing some baseline algorithm.
+These prototypes can be compared to the prototypes obtained at the end of the online 'SeqClu' algorithm,
+where the number of identical prototypes divided by the total number of prototypes
+can be used as evaluation metric.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>experimentName</code>: The name of the experiment for which the prototypes need to be retrieved.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The prototypes obtained after executing some experiment identified by the experiment name.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator"></a></p>
+<h1 id="seqclupvlibraryevaluationbasic_evaluator">seqclupv.library.evaluation.basic_evaluator</h1>
+<p>This module is an implementation of an evaluator that measures the accuracy of the results obtained from the
+'SeqClu' algorithm as well as various other metrics such as the silhouette score, the number of distance
+computations that were made and the time taken to execute the algorithm.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator"></a></p>
+<h2 id="basicevaluator-objects">BasicEvaluator Objects</h2>
+<pre><code class="language-python">class BasicEvaluator(IEvaluator)
+</code></pre>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.actualLabels"></a></p>
+<h4 id="actuallabels_1">actualLabels</h4>
+<pre><code class="language-python"> | @property
+ | actualLabels() -&gt; Dict[str, Union[chr, int]]
+</code></pre>
+<p>This property stores the correct labels of the data processed by the 'SeqClu' algorithm in a dictionary
+where the keys are the hashes of the data.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the keys are the hashes of the data and the values are the correct labels of the
+data processed by the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.baselinePrototypes"></a></p>
+<h4 id="baselineprototypes">baselinePrototypes</h4>
+<pre><code class="language-python"> | @property
+ | baselinePrototypes() -&gt; Optional[List[List[str]]]
+</code></pre>
+<p>This property stores the prototypes of the baseline that are used in the evaluator.</p>
+<p><strong>Returns</strong>:</p>
+<p>The prototypes of the baseline that are used in the evaluator.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.fakeDataSource"></a></p>
+<h4 id="fakedatasource">fakeDataSource</h4>
+<pre><code class="language-python"> | @property
+ | fakeDataSource() -&gt; FakeDataSource
+</code></pre>
+<p>This property stores the fake data source that is used in the evaluator.</p>
+<p><strong>Returns</strong>:</p>
+<p>The fake data source that is used in the evaluator.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.distanceMeasure"></a></p>
+<h4 id="distancemeasure">distanceMeasure</h4>
+<pre><code class="language-python"> | @property
+ | distanceMeasure() -&gt; DynamicTimeWarping
+</code></pre>
+<p>This property stores the distance measure that is used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The distance measure that is used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.seqClu"></a></p>
+<h4 id="seqclu">seqClu</h4>
+<pre><code class="language-python"> | @property
+ | seqClu() -&gt; Optional[SeqClu]
+</code></pre>
+<p>This property stores the 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><strong>Returns</strong>:</p>
+<p>The 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.seqCluBaselineOffline"></a></p>
+<h4 id="seqclubaselineoffline">seqCluBaselineOffline</h4>
+<pre><code class="language-python"> | @property
+ | seqCluBaselineOffline() -&gt; Optional[SeqCluBaselineOffline]
+</code></pre>
+<p>This property stores the offline baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><strong>Returns</strong>:</p>
+<p>The offline baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.seqCluBaselineOnline"></a></p>
+<h4 id="seqclubaselineonline">seqCluBaselineOnline</h4>
+<pre><code class="language-python"> | @property
+ | seqCluBaselineOnline() -&gt; Optional[SeqCluBaselineOnline]
+</code></pre>
+<p>This property stores the online baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><strong>Returns</strong>:</p>
+<p>The online baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.__init__"></a></p>
+<h4 id="__init___7">__init__</h4>
+<pre><code class="language-python"> | __init__(fakeDataSource: FakeDataSource, distanceMeasure: DynamicTimeWarping, seqClu: Optional[SeqClu], seqCluBaselineOnline: Optional[SeqCluBaselineOnline], seqCluBaselineOffline: Optional[SeqCluBaselineOffline], baselinePrototypes: Optional[List[List[str]]]) -&gt; None
+</code></pre>
+<p>This method initializes the evaluator.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>fakeDataSource</code>: The fake data source that is used in the evaluator.</li>
+<li><code>distanceMeasure</code>: The distance measure that is used in the 'SeqClu' algorithm.</li>
+<li><code>seqClu</code>: The 'SeqClu' algorithm that is used in the evaluator.</li>
+<li><code>seqCluBaselineOnline</code>: The online baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</li>
+<li><code>seqCluBaselineOffline</code>: The offline baseline variant of the 'SeqClu' algorithm that is used in the evaluator.</li>
+<li><code>baselinePrototypes</code>: The prototypes of the baseline that are used in the evaluator.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.evaluation.basic_evaluator.BasicEvaluator.evaluate"></a></p>
+<h4 id="evaluate">evaluate</h4>
+<pre><code class="language-python"> | evaluate() -&gt; None
+</code></pre>
+<p>This method evaluates the performance of the variants of the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.heuristics"></a></p>
+<h1 id="seqclupvlibraryheuristics">seqclupv.library.heuristics</h1>
+<p>This package contains implementations of heuristic functions that are used in variants of the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.heuristics.linear_prototype_value"></a></p>
+<h1 id="seqclupvlibraryheuristicslinear_prototype_value">seqclupv.library.heuristics.linear_prototype_value</h1>
+<p>This module contains an implementation of a heuristic functions that are used in variants of the 'SeqClu' algorithm.
+The heuristic function calculates the value of a (candidate) prototype based on a linear combination of the
+representativeness and the weight of the (candidate) prototype.</p>
+<p><a name="seqclupv.library.heuristics.linear_prototype_value.LinearPrototypeValue"></a></p>
+<h2 id="linearprototypevalue-objects">LinearPrototypeValue Objects</h2>
+<pre><code class="language-python">class LinearPrototypeValue(IPrototypeValue)
+</code></pre>
+<p><a name="seqclupv.library.heuristics.linear_prototype_value.LinearPrototypeValue.ratio"></a></p>
+<h4 id="ratio">ratio</h4>
+<pre><code class="language-python"> | @property
+ | ratio() -&gt; float
+</code></pre>
+<p>Returns the value 'a' in a:1 where a:1 is the ratio between the representativeness and the weight.</p>
+<p><strong>Returns</strong>:</p>
+<p>The value 'a' in a:1 where a:1 is the ratio between the representativeness and the weight.</p>
+<p><a name="seqclupv.library.heuristics.linear_prototype_value.LinearPrototypeValue.__init__"></a></p>
+<h4 id="__init___8">__init__</h4>
+<pre><code class="language-python"> | __init__(ratio: float) -&gt; None
+</code></pre>
+<p>This method initializes the function that returns the linear combination of the representativeness and
+weight of a prototype.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>ratio</code>: The value 'a' in a:1 where a:1 is the ratio between the representativeness and the weight.</li>
+</ul>
+<p><a name="seqclupv.library.heuristics.linear_prototype_value.LinearPrototypeValue.evaluate"></a></p>
+<h4 id="evaluate_1">evaluate</h4>
+<pre><code class="language-python"> | evaluate(representativeness: float, weight: float) -&gt; float
+</code></pre>
+<p>This method evaluates the function that returns the linear combination of the representativeness and
+weight of some prototype.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>representativeness</code>: The representativeness of some prototype.</li>
+<li><code>weight</code>: The weight of some prototype.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The value of the prototype.</p>
+<p><a name="seqclupv.library.interfaces"></a></p>
+<h1 id="seqclupvlibraryinterfaces">seqclupv.library.interfaces</h1>
+<p>This package contains all interfaces that are used in the 'SeqClu' framework.</p>
+<p><a name="seqclupv.library.interfaces.baseline_prototypes"></a></p>
+<h1 id="seqclupvlibraryinterfacesbaseline_prototypes">seqclupv.library.interfaces.baseline_prototypes</h1>
+<p>This module contains the interface for the class that stores the prototypes of some baseline. This class can be used
+to compare the prototypes obtained at the end of the online 'Seqclu' algorithm, where the number of identical
+prototypes divided by the total number of prototypes can be used as evaluation metric.</p>
+<p><a name="seqclupv.library.interfaces.baseline_prototypes.IBaselinePrototypes"></a></p>
+<h2 id="ibaselineprototypes-objects">IBaselinePrototypes Objects</h2>
+<pre><code class="language-python">class IBaselinePrototypes(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.baseline_prototypes.IBaselinePrototypes.getPrototypes"></a></p>
+<h4 id="getprototypes_1">getPrototypes</h4>
+<pre><code class="language-python"> | @staticmethod
+ | @abstractmethod
+ | getPrototypes(experimentName: str) -&gt; Optional[List[List[str]]]
+</code></pre>
+<p>This method returns the prototypes that were obtained after executing some baseline algorithm.
+These prototypes can be compared to the prototypes obtained at the end of the online 'SeqClu' algorithm,
+where the number of identical prototypes divided by the total number of prototypes
+can be used as evaluation metric.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>experimentName</code>: The name of the experiment for which the prototypes need to be retrieved.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The prototypes obtained after executing some experiment identified by the experiment name.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store"></a></p>
+<h1 id="seqclupvlibraryinterfacescandidate_store">seqclupv.library.interfaces.candidate_store</h1>
+<p>This module contains an interface for the data structure that stores the candidate prototypes for all clusters
+that are maintained as part of the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore"></a></p>
+<h2 id="icandidatestore-objects">ICandidateStore Objects</h2>
+<pre><code class="language-python">class ICandidateStore(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.candidates"></a></p>
+<h4 id="candidates">candidates</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | candidates() -&gt; Dict[str, Tuple[ndarray, Set[int]]]
+</code></pre>
+<p>This property returns the candidate prototypes along with the indices of the clusters that the
+sequences are candidates for that are stored in the candidate store.</p>
+<p><strong>Returns</strong>:</p>
+<p>The candidate prototypes stored in the candidate store.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.candidateHistory"></a></p>
+<h4 id="candidatehistory">candidateHistory</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | candidateHistory() -&gt; Dict[str, int]
+</code></pre>
+<p>This property returns a dictionary where the keys are the candidate hashes and the values are the ticks at
+which the candidate prototypes were last updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the keys are the candidate hashes and the values are the ticks at
+which the candidate prototypes were last updated.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.lastUpdate"></a></p>
+<h4 id="lastupdate">lastUpdate</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | lastUpdate() -&gt; int
+</code></pre>
+<p>This property returns the tick at which the candidate store was last updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the tick at which the candidate store was last updated.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.addToCandidates"></a></p>
+<h4 id="addtocandidates">addToCandidates</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | addToCandidates(candidate: ndarray, candidateFor: Set[int], tick: int) -&gt; None
+</code></pre>
+<p>This method adds a sequence to the candidate store for a set of clusters at a given tick.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidate</code>: The sequence that is added as a candidate to the candidate store.</li>
+<li><code>candidateFor</code>: The set of clusters that the sequence is a candidate for.</li>
+<li><code>tick</code>: The tick at which the candidate is added to the candidate store.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.getCandidate"></a></p>
+<h4 id="getcandidate">getCandidate</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | getCandidate(candidateHash: str) -&gt; Tuple[ndarray, Set[int]]
+</code></pre>
+<p>This method returns a candidate prototype given its hash along with the indices of the clusters that the
+sequence is a candidate for.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate prototypes that needs to be returned along with the indices
+of the clusters that the sequence is a candidate for.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The candidate prototype given its hash along with the indices of the clusters that the
+sequence is a candidate for.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.lastUpdateCandidate"></a></p>
+<h4 id="lastupdatecandidate">lastUpdateCandidate</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | lastUpdateCandidate(candidateHash: str) -&gt; Optional[int]
+</code></pre>
+<p>This method returns the tick at which the candidate was last updated.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate for which the tick at which it was last updated needs to
+be returned.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the tick at which the candidate was last updated.</p>
+<p><a name="seqclupv.library.interfaces.candidate_store.ICandidateStore.removeFromCandidates"></a></p>
+<h4 id="removefromcandidates">removeFromCandidates</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | removeFromCandidates(candidateHash: str) -&gt; None
+</code></pre>
+<p>This method removes a candidate, identified by its hash, from the candidate store.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate that needs to be removed from the candidate store.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.data_generator"></a></p>
+<h1 id="seqclupvlibraryinterfacesdata_generator">seqclupv.library.interfaces.data_generator</h1>
+<p>This module contains an interface for classes that are responsible for generating data that is passed to the
+'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator"></a></p>
+<h2 id="idatagenerator-objects">IDataGenerator Objects</h2>
+<pre><code class="language-python">class IDataGenerator(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.classes"></a></p>
+<h4 id="classes_1">classes</h4>
+<pre><code class="language-python"> | @property
+ | classes() -&gt; Optional[chr]
+</code></pre>
+<p>This property stores the identifiers of items that are present in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of integers that represent the identifiers of
+the classes of the items that are present in the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.classDictionary"></a></p>
+<h4 id="classdictionary">classDictionary</h4>
+<pre><code class="language-python"> | @property
+ | classDictionary() -&gt; Dict[str, int]
+</code></pre>
+<p>This property stores a mapping from class identifiers to indices.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary in which the keys are the identifiers of the classes of the items
+that are present in the data set and the values are the indices of the classes that can be used to
+retrieve the data that belong to a given class from a two-dimensional list containing all items in the data
+set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.data"></a></p>
+<h4 id="data_2">data</h4>
+<pre><code class="language-python"> | @property
+ | data() -&gt; Optional[List[ndarray]]
+</code></pre>
+<p>This property stores the data in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of sequences that are present in the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.distances"></a></p>
+<h4 id="distances">distances</h4>
+<pre><code class="language-python"> | @property
+ | distances() -&gt; Optional[ndarray]
+</code></pre>
+<p>This property stores the pair-wise distances of items in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>A two-dimensional array of pair-wise distances where indices i,j represent the indices of the
+two items in the list of sequences stored in the 'data' property.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.indices"></a></p>
+<h4 id="indices">indices</h4>
+<pre><code class="language-python"> | @property
+ | indices() -&gt; Optional[List[int]]
+</code></pre>
+<p>This property stores the indices of items in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of indices of items in the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.labels"></a></p>
+<h4 id="labels">labels</h4>
+<pre><code class="language-python"> | @property
+ | labels() -&gt; Optional[List[chr]]
+</code></pre>
+<p>This property stores the labels of items in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of labels of items in the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.numPrototypes"></a></p>
+<h4 id="numprototypes_1">numPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numPrototypes() -&gt; int
+</code></pre>
+<p>This property stores the number of prototypes that should be drawn from the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of prototypes that should be drawn from the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.generateData"></a></p>
+<h4 id="generatedata_5">generateData</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | generateData() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method generates a data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>A data set that is used in the 'SeqClu' algorithm or one of its extensions as
+a list of sequences.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.__init__"></a></p>
+<h4 id="__init___9">__init__</h4>
+<pre><code class="language-python"> | __init__(numPrototypes: int) -&gt; None
+</code></pre>
+<p>This method initializes the properties of the class.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.data_source"></a></p>
+<h1 id="seqclupvlibraryinterfacesdata_source">seqclupv.library.interfaces.data_source</h1>
+<p>This module contains the interface for the data sources that are used by the 'SeqClu' algorithm to request
+data at every tick.</p>
+<p><a name="seqclupv.library.interfaces.data_source.IDataSource"></a></p>
+<h2 id="idatasource-objects">IDataSource Objects</h2>
+<pre><code class="language-python">class IDataSource(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.data_source.IDataSource.classes"></a></p>
+<h4 id="classes_2">classes</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | classes() -&gt; List[Union[chr, int]]
+</code></pre>
+<p>This property stores all the classes that are present in the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>All the classes that are present in the data set.</p>
+<p><a name="seqclupv.library.interfaces.data_source.IDataSource.advanceTick"></a></p>
+<h4 id="advancetick_1">advanceTick</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | advanceTick() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This method advances the state of the data source by one tick. The method returns a list of sequences
+that should be processed by the 'SeqClu' algorithm during the next tick.</p>
+<p><strong>Returns</strong>:</p>
+<p>A list of sequences that should be processed by the 'SeqClu' algorithm during the next tick.</p>
+<p><a name="seqclupv.library.interfaces.distance_measure"></a></p>
+<h1 id="seqclupvlibraryinterfacesdistance_measure">seqclupv.library.interfaces.distance_measure</h1>
+<p>This module contains an interface for the distance measures that are used to compute the distance between two
+data points in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.distance_measure.IDistanceMeasure"></a></p>
+<h2 id="idistancemeasure-objects">IDistanceMeasure Objects</h2>
+<pre><code class="language-python">class IDistanceMeasure(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.distance_measure.IDistanceMeasure.calculateDistance"></a></p>
+<h4 id="calculatedistance_1">calculateDistance</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | calculateDistance(sequenceOne: Union[ndarray, list], sequenceTwo: Union[ndarray, list]) -&gt; float
+</code></pre>
+<p>This method calculates the distance between two sequences.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceOne</code>: The first sequence for which the distance should be computed.</li>
+<li><code>sequenceTwo</code>: The second sequence for which the distance should be computed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The distance between the two sequences.</p>
+<p><a name="seqclupv.library.interfaces.evaluator"></a></p>
+<h1 id="seqclupvlibraryinterfacesevaluator">seqclupv.library.interfaces.evaluator</h1>
+<p>This module contains the interface for evaluators that can assess the performance of the variants of the 'SeqClu'
+algorithm.</p>
+<p><a name="seqclupv.library.interfaces.evaluator.IEvaluator"></a></p>
+<h2 id="ievaluator-objects">IEvaluator Objects</h2>
+<pre><code class="language-python">class IEvaluator(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.evaluator.IEvaluator.evaluate"></a></p>
+<h4 id="evaluate_2">evaluate</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | evaluate() -&gt; None
+</code></pre>
+<p>This method evaluates the performance of the variants of the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.fake_data_source"></a></p>
+<h1 id="seqclupvlibraryinterfacesfake_data_source">seqclupv.library.interfaces.fake_data_source</h1>
+<p>This module contains the interface for fake data sources that store a predefined data set that the 'SeqClu'
+algorithm can request data to process from.</p>
+<p><a name="seqclupv.library.interfaces.fake_data_source.IFakeDataSource"></a></p>
+<h2 id="ifakedatasource-objects">IFakeDataSource Objects</h2>
+<pre><code class="language-python">class IFakeDataSource(IDataSource,  ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.fake_data_source.IFakeDataSource.data"></a></p>
+<h4 id="data_3">data</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | data() -&gt; List[Union[ndarray, list]]
+</code></pre>
+<p>This property stores the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>The data provided by the data source.</p>
+<p><a name="seqclupv.library.interfaces.fake_data_source.IFakeDataSource.numClasses"></a></p>
+<h4 id="numclasses_1">numClasses</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | numClasses() -&gt; int
+</code></pre>
+<p>The number of classes that are present in the data provided by the data source.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of classes that are
+present in the data provided by the data source.</p>
+<p><a name="seqclupv.library.interfaces.heuristics"></a></p>
+<h1 id="seqclupvlibraryinterfacesheuristics">seqclupv.library.interfaces.heuristics</h1>
+<p>This package contains interfaces for heuristic functions that are used in variants of the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.heuristics.prototype_value"></a></p>
+<h1 id="seqclupvlibraryinterfacesheuristicsprototype_value">seqclupv.library.interfaces.heuristics.prototype_value</h1>
+<p>This module contains the interface for a heuristic function that calculates the value of a (candidate) prototype
+given the representativeness and weight of the prototype.</p>
+<p><a name="seqclupv.library.interfaces.heuristics.prototype_value.IPrototypeValue"></a></p>
+<h2 id="iprototypevalue-objects">IPrototypeValue Objects</h2>
+<pre><code class="language-python">class IPrototypeValue(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.heuristics.prototype_value.IPrototypeValue.evaluate"></a></p>
+<h4 id="evaluate_3">evaluate</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | evaluate(representativeness: float, weight: float) -&gt; float
+</code></pre>
+<p>This method evaluates the function that returns the linear combination of the representativeness and
+weight of some prototype.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>representativeness</code>: The representativeness of some prototype.</li>
+<li><code>weight</code>: The weight of some prototype.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The value of the prototype.</p>
+<p><a name="seqclupv.library.interfaces.seqclu"></a></p>
+<h1 id="seqclupvlibraryinterfacesseqclu">seqclupv.library.interfaces.seqclu</h1>
+<p>This module contains an interface for the 'SeqClu' algorithm. Some methods are already implemented.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu"></a></p>
+<h2 id="iseqclu-objects">ISeqClu Objects</h2>
+<pre><code class="language-python">class ISeqClu(ABC)
+</code></pre>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.classes"></a></p>
+<h4 id="classes_3">classes</h4>
+<pre><code class="language-python"> | @property
+ | classes() -&gt; List[Union[chr, int]]
+</code></pre>
+<p>This property stores the classes of the items that are present in the data set.</p>
+<p><strong>Returns</strong>:</p>
+<p>The classes of the items that are present in the data set.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.dataSource"></a></p>
+<h4 id="datasource">dataSource</h4>
+<pre><code class="language-python"> | @property
+ | dataSource() -&gt; IDataSource
+</code></pre>
+<p>This property stores the data source that is used to retrieve data that need to be processed by
+the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The data source that is used to retrieve data that need to be processed by the algorithm.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.distanceMeasure"></a></p>
+<h4 id="distancemeasure_1">distanceMeasure</h4>
+<pre><code class="language-python"> | @property
+ | distanceMeasure() -&gt; IDistanceMeasure
+</code></pre>
+<p>This property stores the distance measure that is used to compute the distance between two sequences.</p>
+<p><strong>Returns</strong>:</p>
+<p>The distance measure that is used to compute the distance between two sequences.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.finalLabels"></a></p>
+<h4 id="finallabels">finalLabels</h4>
+<pre><code class="language-python"> | @property
+ | @abstractmethod
+ | finalLabels() -&gt; Dict[str, Union[chr, int]]
+</code></pre>
+<p>This property stores the correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><strong>Returns</strong>:</p>
+<p>The correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.finish"></a></p>
+<h4 id="finish">finish</h4>
+<pre><code class="language-python"> | @property
+ | finish() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the algorithm finished executing.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the algorithm finished executing.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.numClusters"></a></p>
+<h4 id="numclusters">numClusters</h4>
+<pre><code class="language-python"> | @property
+ | numClusters() -&gt; int
+</code></pre>
+<p>This property stores the number of clusters that are used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of clusters that are used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.numPrototypes"></a></p>
+<h4 id="numprototypes_2">numPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numPrototypes() -&gt; int
+</code></pre>
+<p>This property stores the number of prototypes that are used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of prototypes that are used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.tick"></a></p>
+<h4 id="tick">tick</h4>
+<pre><code class="language-python"> | @property
+ | tick() -&gt; int
+</code></pre>
+<p>This property stores the tick of the algorithm, which represents the moment in time relative to the start
+of the execution of the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the tick of the algorithm, which represents the moment in time relative
+to the start of the execution of the algorithm.</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.finish"></a></p>
+<h4 id="finish_1">finish</h4>
+<pre><code class="language-python"> | @finish.setter
+ | finish(value: bool) -&gt; None
+</code></pre>
+<p>This is the setter for the 'finish' property.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>value</code>: The value that the 'finish' property should be set to.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.__init__"></a></p>
+<h4 id="__init___10">__init__</h4>
+<pre><code class="language-python"> | __init__(dataSource: IDataSource, distanceMeasure: IDistanceMeasure, numClusters: int, numPrototypes: int) -&gt; None
+</code></pre>
+<p>This method initializes the 'SeqClu' algorithm with a data source, distance measure, number of clusters
+and number of prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>dataSource</code>: The data source that should be used in the 'SeqClu' algorithm.</li>
+<li><code>distanceMeasure</code>: The distance measure that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numClusters</code>: The number of clusters that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numPrototypes</code>: The number of prototypes that should be used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.execute"></a></p>
+<h4 id="execute">execute</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | execute() -&gt; None
+</code></pre>
+<p>This method executes the 'SeqClu' algorithm from start to finish. The main loop over the data is
+implemented in here.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.interfaces.seqclu.ISeqClu.processSequence"></a></p>
+<h4 id="processsequence">processSequence</h4>
+<pre><code class="language-python"> | @abstractmethod
+ | processSequence(sequence: Tuple[str, ndarray], considerCandidacy: bool) -&gt; None
+</code></pre>
+<p>This method processes one sequence of the data set that is processed in the 'SeqClu' algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence that should be processed in the 'SeqClu' algorithm.</li>
+<li><code>considerCandidacy</code>: A boolean value indicating whether or not the algorithm should consider if the
+sequence could be a prototype for any of the clusters.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage"></a></p>
+<h1 id="seqclupvlibrarystorage">seqclupv.library.storage</h1>
+<p>This package contains classes that are responsible for storing information that is relevant to the clustering
+process that is part of the 'SeqClu' algorithm. The relevant information includes a set of candidate prototypes,
+a set of clusters and a set of prototypes for some cluster.</p>
+<p><a name="seqclupv.library.storage.candidates"></a></p>
+<h1 id="seqclupvlibrarystoragecandidates">seqclupv.library.storage.candidates</h1>
+<p>This module contains a class called 'CandidateStore' that stores the candidate prototypes that are used in the
+'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore"></a></p>
+<h2 id="candidatestore-objects">CandidateStore Objects</h2>
+<pre><code class="language-python">class CandidateStore(ICandidateStore)
+</code></pre>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.candidates"></a></p>
+<h4 id="candidates_1">candidates</h4>
+<pre><code class="language-python"> | @property
+ | candidates() -&gt; Dict[str, Tuple[ndarray, Set[int]]]
+</code></pre>
+<p>This method is a property that returns the stored set of candidateStore. The candidateStore are stored in a
+dictionary where key is the hash of the candidate and the value is a tuple containing the candidate itself
+and a set of cluster identifiers for which this sequence is a candidate prototype.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where key is the hash of the candidate and the value is a tuple containing the
+candidate itself and a set of cluster identifiers for which this sequence is a candidate prototype.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.candidateHistory"></a></p>
+<h4 id="candidatehistory_1">candidateHistory</h4>
+<pre><code class="language-python"> | @property
+ | candidateHistory() -&gt; Dict[str, int]
+</code></pre>
+<p>This method is a property that returns a dictionary where the key is the hash of some candidate and the
+value is the tick at which the candidate was added to the buffer.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the key is the hash of some candidate and the
+value is the tick at which the candidate was added to the buffer.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.lastUpdate"></a></p>
+<h4 id="lastupdate_1">lastUpdate</h4>
+<pre><code class="language-python"> | @property
+ | lastUpdate() -&gt; int
+</code></pre>
+<p>This method is a property that returns the tick at which the buffer of candidateStore was last updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which the buffer of candidateStore was last updated.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.__init__"></a></p>
+<h4 id="__init___11">__init__</h4>
+<pre><code class="language-python"> | __init__(numRepresentativePrototypes: int, numPrototypes: int, tick: int) -&gt; None
+</code></pre>
+<p>This method initializes the buffer of candidateStore with a given number of representative prototypes, total
+number of prototypes, the maximum size of the buffer of candidateStore and the tick at which the buffer is
+initialized.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes.</li>
+<li><code>numPrototypes</code>: The total number of prototypes.</li>
+<li><code>tick</code>: The tick at which the buffer of candidateStore is initialized.</li>
+</ul>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.addToCandidates"></a></p>
+<h4 id="addtocandidates_1">addToCandidates</h4>
+<pre><code class="language-python"> | addToCandidates(candidate: Tuple[Optional[str], Optional[ndarray]], candidateFor: Set[int], tick: int) -&gt; None
+</code></pre>
+<p>This method adds an incoming sequence to the buffer of candidateStore.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidate</code>: The incoming sequence that needs to be added to the buffer of candidateStore.</li>
+<li><code>candidateFor</code>: The identifiers of the clusters that the incoming sequence is a candidate for.</li>
+<li><code>tick</code>: The tick at which the incoming sequence is promoted to a candidate.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.getCandidate"></a></p>
+<h4 id="getcandidate_1">getCandidate</h4>
+<pre><code class="language-python"> | getCandidate(candidateHash: str) -&gt; Tuple[ndarray, Set[int]]
+</code></pre>
+<p>This method returns a candidate given its hash.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate that is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A two-tuple containing the candidate itself and the identifiers of the clusters that the sequence
+is a candidate for.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.lastUpdateCandidate"></a></p>
+<h4 id="lastupdatecandidate_1">lastUpdateCandidate</h4>
+<pre><code class="language-python"> | lastUpdateCandidate(candidateHash: str) -&gt; int
+</code></pre>
+<p>This method returns the tick at which a candidate that is stored in the buffer was last updated.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate for which the information about when the candidate was last
+updated is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which a candidate that is stored in the buffer was last updated.</p>
+<p><a name="seqclupv.library.storage.candidates.CandidateStore.removeFromCandidates"></a></p>
+<h4 id="removefromcandidates_1">removeFromCandidates</h4>
+<pre><code class="language-python"> | removeFromCandidates(candidateHash: str) -&gt; None
+</code></pre>
+<p>This method removes a sequence from the set of candidateStore. This occurs when the sequence is fully processed
+and either promoted to a prototype or discarded.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidateHash</code>: The hash of the candidate.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.cluster"></a></p>
+<h1 id="seqclupvlibrarystoragecluster">seqclupv.library.storage.cluster</h1>
+<p>This module contains an implementation of the data structure that stores all relevant information about one of the
+clusters that are maintained as part of the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore"></a></p>
+<h2 id="clusterstore-objects">ClusterStore Objects</h2>
+<pre><code class="language-python">class ClusterStore()
+</code></pre>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.averageDistance"></a></p>
+<h4 id="averagedistance">averageDistance</h4>
+<pre><code class="language-python"> | @property
+ | averageDistance() -&gt; float
+</code></pre>
+<p>This property stores the average distance between any prototype and all other prototypes in the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The average distance between any prototype and all other prototypes in the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.averageDistanceFromRepresentativeToNonRepresentative"></a></p>
+<h4 id="averagedistancefromrepresentativetononrepresentative">averageDistanceFromRepresentativeToNonRepresentative</h4>
+<pre><code class="language-python"> | @property
+ | averageDistanceFromRepresentativeToNonRepresentative() -&gt; float
+</code></pre>
+<p>This property stores the average distance from representative prototypes to non-representative prototypes
+in the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The average distance from representative prototypes to non-representative prototypes
+in the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.averageRepresentativeness"></a></p>
+<h4 id="averagerepresentativeness">averageRepresentativeness</h4>
+<pre><code class="language-python"> | @property
+ | averageRepresentativeness() -&gt; float
+</code></pre>
+<p>This property stores the average representativeness of prototypes in the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The average representativeness of prototypes in the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.averageSumOfDistances"></a></p>
+<h4 id="averagesumofdistances">averageSumOfDistances</h4>
+<pre><code class="language-python"> | @property
+ | averageSumOfDistances() -&gt; float
+</code></pre>
+<p>This property stores the average sum of distances between all pairs of prototypes in the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The average sum of distances between all pairs of prototypes in the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.distanceMeasure"></a></p>
+<h4 id="distancemeasure_2">distanceMeasure</h4>
+<pre><code class="language-python"> | @property
+ | distanceMeasure() -&gt; IDistanceMeasure
+</code></pre>
+<p>This property stores the distance measure that is used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The distance measure that is used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.distances"></a></p>
+<h4 id="distances_1">distances</h4>
+<pre><code class="language-python"> | @property
+ | distances() -&gt; Dict[Tuple[str, str], float]
+</code></pre>
+<p>This property stores the pair-wise distances between pairs of (candidate) prototypes.</p>
+<p><strong>Returns</strong>:</p>
+<p>The pair-wise distances between pairs of (candidate) prototypes.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.error"></a></p>
+<h4 id="error_1">error</h4>
+<pre><code class="language-python"> | @property
+ | error() -&gt; float
+</code></pre>
+<p>This property stores the error that is made in every approximation of the distance from an incoming
+sequence to the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The error that is made in every approximation of the distance from an incoming
+sequence to the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.identifier"></a></p>
+<h4 id="identifier">identifier</h4>
+<pre><code class="language-python"> | @property
+ | identifier() -&gt; int
+</code></pre>
+<p>This property stores the identifier of the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the identifier of the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.prototypes"></a></p>
+<h4 id="prototypes">prototypes</h4>
+<pre><code class="language-python"> | @property
+ | prototypes() -&gt; PrototypeStore
+</code></pre>
+<p>This property stores the prototypes of the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The prototypes of the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.sumsOfDistances"></a></p>
+<h4 id="sumsofdistances">sumsOfDistances</h4>
+<pre><code class="language-python"> | @property
+ | sumsOfDistances() -&gt; Dict[Tuple[str, bool], float]
+</code></pre>
+<p>This property stores the sum of distances from a given prototype to all other prototypes in the cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The sum of distances from a given prototype to all other prototypes in the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.upperBound"></a></p>
+<h4 id="upperbound">upperBound</h4>
+<pre><code class="language-python"> | @property
+ | upperBound() -&gt; float
+</code></pre>
+<p>This property stores the upper bound of the distance between some incoming sequence and the cluster for the
+sequence to be considered as a candidate prototype.</p>
+<p><strong>Returns</strong>:</p>
+<p>The upper bound of the distance between some incoming sequence and the cluster for the
+sequence to be considered as a candidate prototype.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.__init__"></a></p>
+<h4 id="__init___12">__init__</h4>
+<pre><code class="language-python"> | __init__(identifier: int, numRepresentativePrototypes: int, numPrototypes: int, distanceMeasure: IDistanceMeasure, tick: int) -&gt; None
+</code></pre>
+<p>This method initializes the cluster given its identifier, the number of (representative) prototypes, the
+distance measure that should be used and the tick at which the cluster was initialized.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>identifier</code>: The identifier of the cluster.</li>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes.</li>
+<li><code>numPrototypes</code>: The number of prototypes.</li>
+<li><code>distanceMeasure</code>: The distance measure that should be used by the cluster.</li>
+<li><code>tick</code>: The tick at which the cluster was initialized.</li>
+</ul>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.computeAverageDistance"></a></p>
+<h4 id="computeaveragedistance">computeAverageDistance</h4>
+<pre><code class="language-python"> | computeAverageDistance(sequence: Tuple[Optional[str], Optional[ndarray]], representative: bool) -&gt; float
+</code></pre>
+<p>This method computes the average distance between some sequence and either the representative prototypes
+or all prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence for which the average distance between itself and some set of prototypes
+needs to be computed.</li>
+<li><code>representative</code>: A boolean value indicating whether or not the distance to the representative
+prototypes should be computed. If this value is false, the distance to all prototypes is computed instead.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The average distance between the given sequence and either the representative prototypes or all
+prototypes.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.isCandidate"></a></p>
+<h4 id="iscandidate">isCandidate</h4>
+<pre><code class="language-python"> | isCandidate(sequence: Tuple[Optional[str], Optional[ndarray]], minimumRepresentativeness: float, clusterAssignment: bool) -&gt; Tuple[float, bool, bool]
+</code></pre>
+<p>This method checks if a given sequence is a candidate prototype for the cluster.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence for which needs to be checked whether or not it is a candidate to become
+a prototype for the cluster.</li>
+<li><code>minimumRepresentativeness</code>: The minimum representativeness that the prototypes should have in order
+for approximation of the distance to the cluster to be used. If the prototypes are not representative
+enough, the accurate distance to the cluster is computed instead.</li>
+<li><code>clusterAssignment</code>: A boolean value indicating whether or not to approximate the distance to the
+cluster.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A tuple containing either the approximated or accurate distance from the sequence to the cluster,
+a boolean value indicating whether or not the sequence is a candidate prototype and whether or not the
+distance from the sequence to the cluster was approximated.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.isRepresentativeEnough"></a></p>
+<h4 id="isrepresentativeenough">isRepresentativeEnough</h4>
+<pre><code class="language-python"> | isRepresentativeEnough(minimumRepresentativeness: float) -&gt; bool
+</code></pre>
+<p>This method determines whether or not the representative prototypes of the cluster are representative
+enough.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>minimumRepresentativeness</code>: The minimum average representativeness the representative prototypes
+should have for them to be considered representative enough.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the representative prototypes of the cluster are
+representative enough.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.pairwiseDistanceOf"></a></p>
+<h4 id="pairwisedistanceof">pairwiseDistanceOf</h4>
+<pre><code class="language-python"> | pairwiseDistanceOf(sequenceOne: Tuple[Optional[str], Optional[ndarray]], sequenceTwo: Tuple[Optional[str], Optional[ndarray]]) -&gt; float
+</code></pre>
+<p>This method calculates the distance of two sequences.
+The result of this computation is memoized and if the distance is requested again at a later point in time,
+the calculation is not done again to save time.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceOne</code>: The first sequence for which the distance should be computed.</li>
+<li><code>sequenceTwo</code>: The second sequence for which the distance should be computed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The computed distance between the two sequences.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.processSequenceIndefinitely"></a></p>
+<h4 id="processsequenceindefinitely">processSequenceIndefinitely</h4>
+<pre><code class="language-python"> | processSequenceIndefinitely(sequenceHash: str) -&gt; None
+</code></pre>
+<p>This method processes a sequence indefinitely, which means it is no longer a (candidate) prototype, but
+merely a sequence. As a result, all the stored information related to this sequence needs to be removed
+from the data structures that make up the cluster. This involves removing all pair-wise distances involving
+the sequence and removing the sequence from the data structure storing the sums of distances.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceHash</code>: The hash of the sequence that needs to be processed indefinitely.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.representativenessOfSequence"></a></p>
+<h4 id="representativenessofsequence">representativenessOfSequence</h4>
+<pre><code class="language-python"> | representativenessOfSequence(sequence: Tuple[Optional[str], Optional[ndarray]]) -&gt; float
+</code></pre>
+<p>This method calculates the representativeness of a sequence relative to the prototypes of the cluster.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence for which the representativeness should be calculated.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A float value between 0 and 1 representing the representativeness of the sequence relative to
+the prototypes of the cluster.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.sumOfDistancesOf"></a></p>
+<h4 id="sumofdistancesof">sumOfDistancesOf</h4>
+<pre><code class="language-python"> | sumOfDistancesOf(sequence: Tuple[Optional[str], Optional[ndarray]], representative: bool) -&gt; float
+</code></pre>
+<p>This method computes the sum of distances between some sequence and either the representative prototypes
+or all prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence for which the sum of distances to either the representative prototypes
+or all prototypes needs to be computed.</li>
+<li><code>representative</code>: A boolean value indicating whether or not the distance to the representative
+prototypes should be computed. If this value is false, the distance to all prototypes is computed instead.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The computed sum of distances. This sum of distances is also memoized such that it can be re-used
+at a later point in time.</p>
+<p><a name="seqclupv.library.storage.cluster.ClusterStore.updatePrototypes"></a></p>
+<h4 id="updateprototypes">updatePrototypes</h4>
+<pre><code class="language-python"> | updatePrototypes(newPrototypes: Dict[str, ndarray], newOtherPrototypeHashes: Set[str], newRepresentativePrototypeHashes: Set[str], tick: int) -&gt; Set[str]
+</code></pre>
+<p>This method updates the prototypes of the cluster.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>newPrototypes</code>: The new prototypes as a dictionary where the keys are the hashes of the new prototypes
+and the values are the prototypes itself.</li>
+<li><code>newOtherPrototypeHashes</code>: The hashes of new non-representative prototypes.</li>
+<li><code>newRepresentativePrototypeHashes</code>: The hashes of new representative prototypes.</li>
+<li><code>tick</code>: The tick at which the prototypes are updated.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The hashes of the prototypes that were removed.</p>
+<p><a name="seqclupv.library.storage.prototypes"></a></p>
+<h1 id="seqclupvlibrarystorageprototypes">seqclupv.library.storage.prototypes</h1>
+<p>This module contains a class called 'PrototypeStore' that is responsible for storing the prototypes of one of the
+clusters that is obtained as a result of executing the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore"></a></p>
+<h2 id="prototypestore-objects">PrototypeStore Objects</h2>
+<pre><code class="language-python">class PrototypeStore()
+</code></pre>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.fullyInitialized"></a></p>
+<h4 id="fullyinitialized">fullyInitialized</h4>
+<pre><code class="language-python"> | @property
+ | fullyInitialized() -&gt; bool
+</code></pre>
+<p>This method is a property that returns a boolean indicating whether or not the data structure has been
+initialized in full.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean indicating whether or not the data structure has been
+initialized in full.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.lastUpdate"></a></p>
+<h4 id="lastupdate_2">lastUpdate</h4>
+<pre><code class="language-python"> | @property
+ | lastUpdate() -&gt; int
+</code></pre>
+<p>This method is a property that returns the tick at which the data structure of prototypes was last
+updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which the data structure of prototypes was last updated.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.numRepresentativePrototypes"></a></p>
+<h4 id="numrepresentativeprototypes">numRepresentativePrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numRepresentativePrototypes() -&gt; int
+</code></pre>
+<p>This method is a property that returns the number of representative prototypes of some cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The number of representative prototypes of the cluster.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.numOtherPrototypes"></a></p>
+<h4 id="numotherprototypes">numOtherPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numOtherPrototypes() -&gt; int
+</code></pre>
+<p>This method is a property that returns the number of prototypes that are not representative prototypes
+of some cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The number of prototypes that are not representative prototypes of some cluster.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.numPrototypes"></a></p>
+<h4 id="numprototypes_3">numPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numPrototypes() -&gt; int
+</code></pre>
+<p>This method is a property that returns the total number of prototypes of some cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The total number of prototypes of some cluster.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.otherPrototypeHashes"></a></p>
+<h4 id="otherprototypehashes">otherPrototypeHashes</h4>
+<pre><code class="language-python"> | @property
+ | otherPrototypeHashes() -&gt; Set[str]
+</code></pre>
+<p>This method is a property that returns the hashes of the prototypes that are not representative prototypes
+of some cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The hashes of the prototypes that are not representative prototypes of some cluster.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.prototypeHistory"></a></p>
+<h4 id="prototypehistory">prototypeHistory</h4>
+<pre><code class="language-python"> | @property
+ | prototypeHistory() -&gt; Dict[str, int]
+</code></pre>
+<p>This method is a property that returns a dictionary where the key is the hash of some prototype and the
+value is the tick at which the prototype was last updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the key is the hash of some prototype and the value is the tick at which
+the prototype was last updated.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.prototypes"></a></p>
+<h4 id="prototypes_1">prototypes</h4>
+<pre><code class="language-python"> | @property
+ | prototypes() -&gt; Dict[str, ndarray]
+</code></pre>
+<p>This method is a property that returns a dictionary where the key is the hash of some prototype and the
+value is the prototype itself.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the key is the hash of some prototype and the value is the prototype itself.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.representativePrototypesInitialized"></a></p>
+<h4 id="representativeprototypesinitialized">representativePrototypesInitialized</h4>
+<pre><code class="language-python"> | @property
+ | representativePrototypesInitialized() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the representative prototypes have been
+initialized.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the representative prototypes have been initialized.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.representativePrototypeHashes"></a></p>
+<h4 id="representativeprototypehashes">representativePrototypeHashes</h4>
+<pre><code class="language-python"> | @property
+ | representativePrototypeHashes() -&gt; Set[str]
+</code></pre>
+<p>This method is a property that returns the hashes of the prototypes that are representative prototypes
+of some cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The hashes of the prototypes that are representative prototypes of some cluster.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.updatingPrototypes"></a></p>
+<h4 id="updatingprototypes">updatingPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | updatingPrototypes() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the prototypes are currently being updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the prototypes are currently being updated.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.__init__"></a></p>
+<h4 id="__init___13">__init__</h4>
+<pre><code class="language-python"> | __init__(numRepresentativePrototypes: int, numPrototypes: int, tick: int) -&gt; None
+</code></pre>
+<p>This method initializes the 'PrototypeStore' class with a given number of representative prototypes, number
+of total prototypes and the tick at which the class is initialized.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes.</li>
+<li><code>numPrototypes</code>: The total number of prototypes.</li>
+<li><code>tick</code>: The tick at which the class is initialized.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.addPrototype"></a></p>
+<h4 id="addprototype">addPrototype</h4>
+<pre><code class="language-python"> | addPrototype(prototype: Tuple[Optional[str], Optional[ndarray]], representative: bool, tick: int, toReplaceHash: Optional[str]) -&gt; None
+</code></pre>
+<p>This method adds a prototype to the set of prototypes that is stored in this class.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototype</code>: The sequence that needs to be added as prototype.</li>
+<li><code>representative</code>: A boolean value indicating whether or not the sequence should become a representative
+prototype.</li>
+<li><code>tick</code>: The tick at which the sequence is added to the set of prototypes that is stored in this class.</li>
+<li><code>toReplaceHash</code>: An optional hash of the sequence that needs to be demoted to a regular sequence from
+a prototype.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.getPrototype"></a></p>
+<h4 id="getprototype">getPrototype</h4>
+<pre><code class="language-python"> | getPrototype(prototypeHash: str) -&gt; ndarray
+</code></pre>
+<p>This method returns a prototype given the hash of this prototype.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHash</code>: The hash of the prototype that is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The requested prototype.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.lastUpdatePrototype"></a></p>
+<h4 id="lastupdateprototype">lastUpdatePrototype</h4>
+<pre><code class="language-python"> | lastUpdatePrototype(prototypeHash: str) -&gt; Optional[int]
+</code></pre>
+<p>This method returns the tick at which some prototype was last updated given the hash of this prototype.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHash</code>: The hash of the prototype for which information about when it was last updated
+is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which the prototype corresponding to the given hash was last updated.</p>
+<p><a name="seqclupv.library.storage.prototypes.PrototypeStore.updatePrototypes"></a></p>
+<h4 id="updateprototypes_1">updatePrototypes</h4>
+<pre><code class="language-python"> | updatePrototypes(newPrototypes: Dict[str, ndarray], newOtherPrototypeHashes: Set[str], newRepresentativePrototypeHashes: Set[str], tick: int) -&gt; Set[str]
+</code></pre>
+<p>This method updates the prototypes stored in the prototype store.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>newPrototypes</code>: The new prototypes as a dictionary where the keys are the hashes of the new prototypes
+and the values are the prototypes itself.</li>
+<li><code>newOtherPrototypeHashes</code>: The hashes of new non-representative prototypes.</li>
+<li><code>newRepresentativePrototypeHashes</code>: The hashes of new representative prototypes.</li>
+<li><code>tick</code>: The tick at which the prototypes are updated.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The hashes of the prototypes that were removed.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies"></a></p>
+<h1 id="seqclupvlibrarystorageprototype_frequencies">seqclupv.library.storage.prototype_frequencies</h1>
+<p>This module contains an implementation of a data structure that stores how often a prototype has been observed to
+be the closest to one of the prototypes of that cluster.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore"></a></p>
+<h2 id="prototypefrequencystore-objects">PrototypeFrequencyStore Objects</h2>
+<pre><code class="language-python">class PrototypeFrequencyStore()
+</code></pre>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.computeSumOfDistances"></a></p>
+<h4 id="computesumofdistances">computeSumOfDistances</h4>
+<pre><code class="language-python"> | @staticmethod
+ | computeSumOfDistances(prototypeHashes: Set[str], distances: Dict[Tuple[str, str], float]) -&gt; float
+</code></pre>
+<p>This method computes the sum of distances between all pairs of prototypes identified by a set of prototype
+hashes given a dictionary of pair-wise distances.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHashes</code>: The hashes of the prototypes for which
+the sum of pair-wise distances needs to be computed.</li>
+<li><code>distances</code>: The pair-wise distances stored in a dictionary identified by a tuple of prototype hashes
+that identify the two prototypes.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The sum of distances for the given prototypes and dictionary of distances.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.frequencies"></a></p>
+<h4 id="frequencies">frequencies</h4>
+<pre><code class="language-python"> | @property
+ | frequencies() -&gt; Dict[str, Optional[int]]
+</code></pre>
+<p>This property stores the amount of times a prototype has been observed as being closest to an incoming
+sequence as a dictionary where the keys are the hashes of the prototypes.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the keys are the hashes of the prototypes and the values are the amounts of
+times a prototype has been observed as being closest to an incoming sequence.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.numPrototypes"></a></p>
+<h4 id="numprototypes_4">numPrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numPrototypes() -&gt; int
+</code></pre>
+<p>This property stores the number of prototypes that will be used in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of prototypes that will be used in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.totalObservations"></a></p>
+<h4 id="totalobservations">totalObservations</h4>
+<pre><code class="language-python"> | @property
+ | totalObservations() -&gt; int
+</code></pre>
+<p>This property stores the total number of observations that was made.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the total number of observations that was made.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.__init__"></a></p>
+<h4 id="__init___14">__init__</h4>
+<pre><code class="language-python"> | __init__(numPrototypes: int) -&gt; None
+</code></pre>
+<p>This method initializes the data structure storing information about the prototype frequencies.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.closestPrototypeObserved"></a></p>
+<h4 id="closestprototypeobserved">closestPrototypeObserved</h4>
+<pre><code class="language-python"> | closestPrototypeObserved(prototypeHash: str, numVotes: int) -&gt; None
+</code></pre>
+<p>This method adds a given amount of votes to the amount of votes that a prototype already has.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHash</code>: The hash of the prototype that should get votes.</li>
+<li><code>numVotes</code>: The number of votes that the prototype should get.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.getWeight"></a></p>
+<h4 id="getweight">getWeight</h4>
+<pre><code class="language-python"> | getWeight(prototypeHash: str) -&gt; float
+</code></pre>
+<p>This method calculates the weight of a prototype, identified by its hash, and returns this value.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHash</code>: The hash of the prototype for which the weight needs to be calculated and returned.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The weight of the prototype identified by its hash.</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.initializePrototype"></a></p>
+<h4 id="initializeprototype">initializePrototype</h4>
+<pre><code class="language-python"> | initializePrototype(prototypeHash: str) -&gt; None
+</code></pre>
+<p>This method initializes a prototype given its hash.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>prototypeHash</code>: The hash of the prototype for which an entry needs to be added to the prototype
+frequencies data structure.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.prototype_frequencies.PrototypeFrequencyStore.updatePrototypes"></a></p>
+<h4 id="updateprototypes_2">updatePrototypes</h4>
+<pre><code class="language-python"> | updatePrototypes(newPrototypeHashes: Set[str], addedPrototypeHashes: Set[str], removedPrototypeHashes: Set[str], distances: Dict[Tuple[str, str], float]) -&gt; None
+</code></pre>
+<p>This method updates the prototypes that are stored in the prototype frequencies store given sets of
+updated prototype hashes, newly added prototype hashes and rmeoved prototype hashes, as well as
+a dictionary of pair-wise distances for all pairs of prototypes, regardless of whether or not these
+prototypes are discarded.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>newPrototypeHashes</code>: The hashes of the updated prototypes.</li>
+<li><code>addedPrototypeHashes</code>: The hashes of the newly dded prototypes.</li>
+<li><code>removedPrototypeHashes</code>: The hashes of the removed prototypes.</li>
+<li><code>distances</code>: The pair-wise distances for all pairs of prototypes, regardless of whether or not these
+prototypes are discarded.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.sequences"></a></p>
+<h1 id="seqclupvlibrarystoragesequences">seqclupv.library.storage.sequences</h1>
+<p>This module contains a class called 'SequenceStore' that stores the ambiguous sequence that have yet to be clustered
+ in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore"></a></p>
+<h2 id="sequencestore-objects">SequenceStore Objects</h2>
+<pre><code class="language-python">class SequenceStore()
+</code></pre>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.sequences"></a></p>
+<h4 id="sequences">sequences</h4>
+<pre><code class="language-python"> | @property
+ | sequences() -&gt; Dict[str, ndarray]
+</code></pre>
+<p>This method is a property that returns the stored set of ambiguous sequenceStore. The sequenceStore are stored in a
+dictionary where key is the hash of the sequence and the value is the sequence itself.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where key is the hash of the sequence and the value is the sequence itself.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.sequenceHistory"></a></p>
+<h4 id="sequencehistory">sequenceHistory</h4>
+<pre><code class="language-python"> | @property
+ | sequenceHistory() -&gt; Dict[str, int]
+</code></pre>
+<p>This method is a property that returns a dictionary where the key is the hash of some sequence and the
+value is the tick at which the sequence was added to the buffer.</p>
+<p><strong>Returns</strong>:</p>
+<p>A dictionary where the key is the hash of some sequence and the
+value is the tick at which the sequence was added to the buffer.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.lastUpdate"></a></p>
+<h4 id="lastupdate_3">lastUpdate</h4>
+<pre><code class="language-python"> | @property
+ | lastUpdate() -&gt; int
+</code></pre>
+<p>This method is a property that returns the tick at which the buffer of sequenceStore was last updated.</p>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which the buffer of sequenceStore was last updated.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.__init__"></a></p>
+<h4 id="__init___15">__init__</h4>
+<pre><code class="language-python"> | __init__(tick: int) -&gt; None
+</code></pre>
+<p>This method initializes the buffer of sequenceStore with a given tick at which the buffer is
+initialized.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>tick</code>: The tick at which the buffer of sequenceStore is initialized.</li>
+</ul>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.addToSequences"></a></p>
+<h4 id="addtosequences">addToSequences</h4>
+<pre><code class="language-python"> | addToSequences(sequence: ndarray, tick: int) -&gt; None
+</code></pre>
+<p>This method adds an incoming sequence to the buffer of sequenceStore.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The incoming sequence that needs to be added to the buffer of sequenceStore.</li>
+<li><code>tick</code>: The tick at which the incoming sequence is promoted to a sequence.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.getSequence"></a></p>
+<h4 id="getsequence">getSequence</h4>
+<pre><code class="language-python"> | getSequence(sequenceHash: str) -&gt; ndarray
+</code></pre>
+<p>This method returns a sequence given its hash.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceHash</code>: The hash of the sequence that is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The requested sequence.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.lastUpdateSequence"></a></p>
+<h4 id="lastupdatesequence">lastUpdateSequence</h4>
+<pre><code class="language-python"> | lastUpdateSequence(sequenceHash: str) -&gt; int
+</code></pre>
+<p>This method returns the tick at which a sequence that is stored in the buffer was last updated.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceHash</code>: The hash of the sequence for which the information about when the sequence was last
+updated is requested.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The tick at which a sequence that is stored in the buffer was last updated.</p>
+<p><a name="seqclupv.library.storage.sequences.SequenceStore.removeFromSequences"></a></p>
+<h4 id="removefromsequences">removeFromSequences</h4>
+<pre><code class="language-python"> | removeFromSequences(sequenceHash: str) -&gt; None
+</code></pre>
+<p>This method removes a sequence from the set of sequenceStore. This occurs when the sequence is fully processed
+and discarded.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceHash</code>: The hash of the sequence.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.utilities"></a></p>
+<h1 id="seqclupvlibraryutilities">seqclupv.library.utilities</h1>
+<p>This package contains utility methods that are used throughout the 'SeqClu' framework.</p>
+<p><a name="seqclupv.library.utilities.calculate_f1_score"></a></p>
+<h1 id="seqclupvlibraryutilitiescalculate_f1_score">seqclupv.library.utilities.calculate_f1_score</h1>
+<p>This module contains a method that calculates the F1-score given sets of true labels and predicted labels.</p>
+<p><a name="seqclupv.library.utilities.calculate_f1_score.calculate_f1_score"></a></p>
+<h4 id="calculate_f1_score">calculate_f1_score</h4>
+<pre><code class="language-python">calculate_f1_score(trueLabels: Dict[str, Union[chr, int]], predictedLabels: Dict[str, Union[chr, int]], average: str) -&gt; float
+</code></pre>
+<p>This method calculates the F1-score given a set of true labels and predicted labels as well as the averaging
+procedure that decides the type of F1-score.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>trueLabels</code>: The correct labels of the data as a dictionary where the keys are the hashes of the sequences
+and the values are the labels.</li>
+<li><code>predictedLabels</code>: The predicted labels of the data as a dictionary where the keys are the hashes of the
+sequences and the values are the labels.</li>
+<li><code>average</code>: The averaging procedure used in the statistical test. The averaging procedure decides the type
+of F1-score, this can be the micro, macro or weighted F1-score.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The F1-score for the given sets of true labels and predicted labels.</p>
+<p><a name="seqclupv.library.utilities.construct_stream"></a></p>
+<h1 id="seqclupvlibraryutilitiesconstruct_stream">seqclupv.library.utilities.construct_stream</h1>
+<p>This module contains a method that constructs a data stream of sequenceStore
+from a given set of clusters, classes and number of prototypes.</p>
+<p><a name="seqclupv.library.utilities.construct_stream.constructStream"></a></p>
+<h4 id="constructstream">constructStream</h4>
+<pre><code class="language-python">constructStream(clusters: List[List[Union[ndarray, list]]], classes: List[Union[int, chr]], numPrototypes: int) -&gt; Tuple[Stream, Stream]
+</code></pre>
+<p>This method constructs a data stream of sequenceStore from a
+given set of clusters, classes and number of prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>clusters</code>: The set of clusters that needs to be clustered by some clustering algorithm.</li>
+<li><code>classes</code>: The identifier of the classes that belong to the clusters that were passed to this method.</li>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the clustering algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A two-tuple where the first item is the complete stream and the second item is a stream of sequences
+from any of the clusters that are not prototypes where the order of sequenceStore is randomized.</p>
+<p><a name="seqclupv.library.utilities.hash_filter"></a></p>
+<h1 id="seqclupvlibraryutilitieshash_filter">seqclupv.library.utilities.hash_filter</h1>
+<p>This module contains a method that checks if some hash is part of a key that is a tuple of two hashes.</p>
+<p><a name="seqclupv.library.utilities.hash_filter.isHashInKey"></a></p>
+<h4 id="ishashinkey">isHashInKey</h4>
+<pre><code class="language-python">isHashInKey(key: Tuple[str, str], sequenceHash: str) -&gt; bool
+</code></pre>
+<p>This method checks if some hash is part of a key that is a tuple of two hashes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>key</code>: A key that is a tuple of two hashes.</li>
+<li><code>sequenceHash</code>: The hash that needs to be compared to the key.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the incoming hash is part of the key.</p>
+<p><a name="seqclupv.library.utilities.hash_sequence"></a></p>
+<h1 id="seqclupvlibraryutilitieshash_sequence">seqclupv.library.utilities.hash_sequence</h1>
+<p>This module contains a method that hashes an incoming sequence using the Python package 'xxhash'.</p>
+<p><a name="seqclupv.library.utilities.hash_sequence.hashSequence"></a></p>
+<h4 id="hashsequence">hashSequence</h4>
+<pre><code class="language-python">hashSequence(sequence: ndarray) -&gt; str
+</code></pre>
+<p>This method hashes an incoming sequence using the Python package 'xxhash'.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The incoming sequence that needs to be hashed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The hash of the incoming sequence.</p>
+<p><a name="seqclupv.library.utilities.statistical_testing"></a></p>
+<h1 id="seqclupvlibraryutilitiesstatistical_testing">seqclupv.library.utilities.statistical_testing</h1>
+<p>This module contains a command-line interface for carrying out a statistical test on two provided samples of data.
+The function to carry out a statistical test on two provided samples is contained in this module as well.</p>
+<p><a name="seqclupv.library.utilities.statistical_testing.statistical_test"></a></p>
+<h4 id="statistical_test">statistical_test</h4>
+<pre><code class="language-python">statistical_test(sampleOne: ndarray, sampleTwo: ndarray, testName: str) -&gt; None
+</code></pre>
+<p>This method carries out some statistical test, identified by its name, on two given samples.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sampleOne</code>: The first sample that should be used in the statistical test.</li>
+<li><code>sampleTwo</code>: The second sample that should be used in the statistical test.</li>
+<li><code>testName</code>: The name of the statistical test that should be used.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.utilities.statistical_testing.main"></a></p>
+<h4 id="main">main</h4>
+<pre><code class="language-python">main(argv: List[str]) -&gt; None
+</code></pre>
+<p>This method is the command-line interface for the statistical test program.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>argv</code>: The arguments that are passed to the statistical test program.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.visualization"></a></p>
+<h1 id="seqclupvlibraryvisualization">seqclupv.library.visualization</h1>
+<p>This module contains classes that bundle several approaches to visualize the results of the variations of
+the 'SeqClu' algorithm that are contained in the package.</p>
+<p><a name="seqclupv.library.visualization.visualizer"></a></p>
+<h1 id="seqclupvlibraryvisualizationvisualizer">seqclupv.library.visualization.visualizer</h1>
+<p>This module contains a class that bundles several approaches to visualize the results of the variations of
+the 'SeqClu' algorithm that are contained in the package.</p>
+<p>NOTE: This class has actually never been used during the research project and therefore needs major modifications
+to make it compatible with the rest of the framework.</p>
+<p><a name="seqclupv.library.visualization.visualizer.Visualizer"></a></p>
+<h2 id="visualizer-objects">Visualizer Objects</h2>
+<pre><code class="language-python">class Visualizer()
+</code></pre>
+<p><a name="seqclupv.library.visualization.visualizer.Visualizer.visualizeInputData"></a></p>
+<h4 id="visualizeinputdata">visualizeInputData</h4>
+<pre><code class="language-python"> | visualizeInputData() -&gt; None
+</code></pre>
+<p>This method visualizes the input data in two dimensions.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.visualization.visualizer.Visualizer.visualizeClustersAsTSNE"></a></p>
+<h4 id="visualizeclustersastsne">visualizeClustersAsTSNE</h4>
+<pre><code class="language-python"> | visualizeClustersAsTSNE() -&gt; None
+</code></pre>
+<p>This method visualizes the clusters as TSNE-graphs.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.visualization.visualizer.Visualizer.visualizeClustersAsHeatMaps"></a></p>
+<h4 id="visualizeclustersasheatmaps">visualizeClustersAsHeatMaps</h4>
+<pre><code class="language-python"> | visualizeClustersAsHeatMaps() -&gt; None
+</code></pre>
+<p>This method visualizes the clusters as heatmaps.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.library.visualization.visualizer.Visualizer.simulateClusteringProcess"></a></p>
+<h4 id="simulateclusteringprocess">simulateClusteringProcess</h4>
+<pre><code class="language-python"> | simulateClusteringProcess() -&gt; None
+</code></pre>
+<p>This method makes multiple plots that replay the clustering process step-by-step.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqClu"></a></p>
+<h1 id="seqclupvseqclu">seqclupv.SeqClu</h1>
+<p>This class can be used to process a stream of data in a separate thread while some other thread performs work.
+The data stream is clustered using the 'SeqClu' algorithm and the labels of items that have already been seen can
+be requested real-time.</p>
+<p><a name="seqclupv.SeqClu.SeqClu"></a></p>
+<h2 id="seqclu-objects">SeqClu Objects</h2>
+<pre><code class="language-python">class SeqClu(ISeqClu)
+</code></pre>
+<p><a name="seqclupv.SeqClu.SeqClu.assignToCluster"></a></p>
+<h4 id="assigntocluster">assignToCluster</h4>
+<pre><code class="language-python"> | @staticmethod
+ | assignToCluster(clusters: List[ClusterStore], sequence: Tuple[Optional[str], Optional[ndarray]], distances: List[Tuple[int, float, float]], clusterAssignment: bool) -&gt; Tuple[int, bool]
+</code></pre>
+<p>This method assigns a sequence to one of the provided clusters using a dictionary of pair-wise distances.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>clusters</code>: The clusters that the sequence can be assigned to.</li>
+<li><code>sequence</code>: The sequence that needs to be assigned to one of the clusters.</li>
+<li><code>distances</code>: The pair-wise distances stored in a dictionary identified by a tuple of prototype hashes
+that identify the two prototypes.</li>
+<li><code>clusterAssignment</code>: A boolean value indicating whether or not to approximate the distance to the
+cluster.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A tuple containing the index of the cluster that the sequence was assigned to and a boolean value
+indicating whether or not the distances used to make the cluster assignment decision were approximated.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.assignToClusterAccurate"></a></p>
+<h4 id="assigntoclusteraccurate">assignToClusterAccurate</h4>
+<pre><code class="language-python"> | @staticmethod
+ | assignToClusterAccurate(clusters: List[ClusterStore], sequence: Tuple[Optional[str], Optional[ndarray]]) -&gt; int
+</code></pre>
+<p>This method assigns a sequence to one of the provided clusters using accurate distances.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>clusters</code>: The clusters that the sequence can be assigned to.</li>
+<li><code>sequence</code>: The sequence that needs to be assigned to one of the clusters.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The index of the cluster that the sequence was assigned to.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.computeDistanceToClusters"></a></p>
+<h4 id="computedistancetoclusters">computeDistanceToClusters</h4>
+<pre><code class="language-python"> | @staticmethod
+ | computeDistanceToClusters(clusters: List[ClusterStore], sequence: Tuple[Optional[str], Optional[ndarray]], clusterAssignment: bool) -&gt; List[Tuple[int, float, float]]
+</code></pre>
+<p>This method computes the distance of a sequence to all clusters.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>clusters</code>: The clusters for which the distance to the sequence needs to be computed.</li>
+<li><code>sequence</code>: The sequence for which the distance to the clusters needs to be computed.</li>
+<li><code>clusterAssignment</code>: A boolean value indicating whether or not to approximate the distance to the
+cluster.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A list of tuples containing the index of a cluster, the computed distance and the error made in
+this computation. For accurate distances, this error is 0.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.determineCandidacy"></a></p>
+<h4 id="determinecandidacy">determineCandidacy</h4>
+<pre><code class="language-python"> | @staticmethod
+ | determineCandidacy(candidates: CandidateStore, clusters: List[ClusterStore], sequence: Tuple[Optional[str], Optional[ndarray]], minimumRepresentativeness: float, clusterAssignment: bool) -&gt; Tuple[List[Tuple[int, float, float]], Set[int]]
+</code></pre>
+<p>This method determines for which clusters a given sequence is a candidate.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>candidates</code>: The buffer of candidate prototypes.</li>
+<li><code>clusters</code>: The clusters that the given sequence could become a prototype for.</li>
+<li><code>sequence</code>: The sequence for which needs to be determined whether or not it is a candidate to become
+a prototype for the clusters.</li>
+<li><code>minimumRepresentativeness</code>: The minimum representativeness that the prototypes should have in order
+for approximation of the distance to the cluster to be used. If the prototypes are not representative
+enough, the accurate distance to the cluster is computed instead.</li>
+<li><code>clusterAssignment</code>: A boolean value indicating whether or not to approximate the distance to the
+cluster.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A tuple containing a list of tuples that each contain the index of some cluster, the computed
+distance and the error made in this computation, as well as the indices of the clusters that the sequence
+is a candidate for.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.initializeClusters"></a></p>
+<h4 id="initializeclusters">initializeClusters</h4>
+<pre><code class="language-python"> | @staticmethod
+ | initializeClusters(numClusters: int, numRepresentativePrototypes: int, numPrototypes: int, distanceMeasure: IDistanceMeasure, tick: int) -&gt; List[ClusterStore]
+</code></pre>
+<p>This method initializes the clusters that are used in the algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numClusters</code>: The number of clusters that need to be initialized.</li>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes each cluster needs to have.</li>
+<li><code>numPrototypes</code>: The number of prototypes each cluster needs to have.</li>
+<li><code>distanceMeasure</code>: The distance measure that is used in the algorithm.</li>
+<li><code>tick</code>: The tick at which the clusters are initialized.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The resulting list of initialized clusters.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.isAmbiguous"></a></p>
+<h4 id="isambiguous">isAmbiguous</h4>
+<pre><code class="language-python"> | @staticmethod
+ | isAmbiguous(distanceAndErrorOne: Tuple[float, float], distanceAndErrorTwo: Tuple[float, float]) -&gt; bool
+</code></pre>
+<p>This method determines whether or not two computed distances given their errors are relatively too close
+to each other and are therefore ambiguous.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>distanceAndErrorOne</code>: The distance and error that resulted from some distance computation.</li>
+<li><code>distanceAndErrorTwo</code>: The distance and error that resulted from another distance computation.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the pair of distance computations is ambiguous.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.processCandidatesForCluster"></a></p>
+<h4 id="processcandidatesforcluster">processCandidatesForCluster</h4>
+<pre><code class="language-python"> | @staticmethod
+ | processCandidatesForCluster(cluster: ClusterStore, candidates: List[Tuple[str, ndarray]], numPrototypes: int, numRepresentativePrototypes: int, prototypeValue: IPrototypeValue, tick: int) -&gt; Set[str]
+</code></pre>
+<p>This method processes the candidate prototypes for a given cluster. The method decides whether or not
+the candidates are actually of high enough quality to become a prototype and if so, promotes these
+sequences to prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>cluster</code>: The cluster for which the candidate prototypes should be processed.</li>
+<li><code>candidates</code>: The candidate prototypes that should be processed.</li>
+<li><code>numPrototypes</code>: The number of prototypes of all clusters.</li>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes of all clusters.</li>
+<li><code>prototypeValue</code>: The heuristic function that is used to compute the value of a prototype.</li>
+<li><code>tick</code>: The tick at which the candidate prototypes were processed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The hashes of the prototypes that were discarded after processing all candidate prototypes.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.bufferedSequences"></a></p>
+<h4 id="bufferedsequences">bufferedSequences</h4>
+<pre><code class="language-python"> | @property
+ | bufferedSequences() -&gt; Set[str]
+</code></pre>
+<p>This property stores the sequences that were buffered by the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The set of sequences that were buffered by the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.buffering"></a></p>
+<h4 id="buffering">buffering</h4>
+<pre><code class="language-python"> | @property
+ | buffering() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the buffering feature is enabled.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the buffering feature is enabled.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.bufferFull"></a></p>
+<h4 id="bufferfull">bufferFull</h4>
+<pre><code class="language-python"> | @property
+ | bufferFull() -&gt; bool
+</code></pre>
+<p>This method is a property that returns a boolean indicating whether or not the set of candidateStore has
+reached the maximum allowed size and is therefore full.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean indicating whether or not the set of candidateStore has reached
+the maximum allowed size and is therefore full.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.bufferSize"></a></p>
+<h4 id="buffersize">bufferSize</h4>
+<pre><code class="language-python"> | @property
+ | bufferSize() -&gt; int
+</code></pre>
+<p>This method is a property that returns the maximum size of the buffer of candidateStore and ambiguous
+sequenceStore.</p>
+<p><strong>Returns</strong>:</p>
+<p>The maximum size of the buffer of candidateStore and ambiguous sequenceStore.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.candidateStore"></a></p>
+<h4 id="candidatestore">candidateStore</h4>
+<pre><code class="language-python"> | @property
+ | candidateStore() -&gt; CandidateStore
+</code></pre>
+<p>This property stores the buffer of candidate prototypes.</p>
+<p><strong>Returns</strong>:</p>
+<p>The buffer of candidate prototypes.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.classes"></a></p>
+<h4 id="classes_4">classes</h4>
+<pre><code class="language-python"> | @property
+ | classes() -&gt; List[Union[chr, int]]
+</code></pre>
+<p>Tis property stores the classes that are present in the data set that is processed by the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The classes that are present in the data set that is processed by the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.clusterAssignment"></a></p>
+<h4 id="clusterassignment">clusterAssignment</h4>
+<pre><code class="language-python"> | @property
+ | clusterAssignment() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not approximation of the distance to clusters
+is enabled in the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not approximation of the distance to clusters
+is enabled in the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.clusteredByApproximation"></a></p>
+<h4 id="clusteredbyapproximation">clusteredByApproximation</h4>
+<pre><code class="language-python"> | @property
+ | clusteredByApproximation() -&gt; Set[str]
+</code></pre>
+<p>This property stores the sequences that were clustered by approximation by the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The set of sequences that were clustered by approximation by the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.clusters"></a></p>
+<h4 id="clusters">clusters</h4>
+<pre><code class="language-python"> | @property
+ | clusters() -&gt; List[ClusterStore]
+</code></pre>
+<p>This property stores the clusters that the algorithm needs to work with.</p>
+<p><strong>Returns</strong>:</p>
+<p>The clusters that the algorithm needs to work with.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.finalLabels"></a></p>
+<h4 id="finallabels_1">finalLabels</h4>
+<pre><code class="language-python"> | @property
+ | finalLabels() -&gt; Dict[str, int]
+</code></pre>
+<p>This property stores the correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><strong>Returns</strong>:</p>
+<p>The correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.fullyInitialized"></a></p>
+<h4 id="fullyinitialized_1">fullyInitialized</h4>
+<pre><code class="language-python"> | @property
+ | fullyInitialized() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the prototypes of all clusters are fully
+initialized.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the prototypes of all clusters are fully
+initialized.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.labels"></a></p>
+<h4 id="labels_1">labels</h4>
+<pre><code class="language-python"> | @property
+ | labels() -&gt; Dict[str, int]
+</code></pre>
+<p>This property stores the predicted labels of all sequences except for those that are prototypes.</p>
+<p><strong>Returns</strong>:</p>
+<p>The predicted labels of all sequences except for those that are prototypes.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.minimumRepresentativeness"></a></p>
+<h4 id="minimumrepresentativeness">minimumRepresentativeness</h4>
+<pre><code class="language-python"> | @property
+ | minimumRepresentativeness() -&gt; float
+</code></pre>
+<p>This property stores the minimum representativeness that the prototypes should have in order
+for approximation of the distance to the cluster to be used. If the prototypes are not representative
+enough, the accurate distance to the cluster is computed instead.</p>
+<p><strong>Returns</strong>:</p>
+<p>The minimum representativeness that the prototypes should have in order
+for approximation of the distance to the cluster to be used. If the prototypes are not representative
+enough, the accurate distance to the cluster is computed instead.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.numFullyProcessed"></a></p>
+<h4 id="numfullyprocessed">numFullyProcessed</h4>
+<pre><code class="language-python"> | @property
+ | numFullyProcessed() -&gt; int
+</code></pre>
+<p>This property stores the number of sequences that were fully processed by the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of sequences that were fully processed by the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.numRepresentativePrototypes"></a></p>
+<h4 id="numrepresentativeprototypes_1">numRepresentativePrototypes</h4>
+<pre><code class="language-python"> | @property
+ | numRepresentativePrototypes() -&gt; int
+</code></pre>
+<p>This property stores the number of representative prototypes of all clusters that are used by the algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of representative prototypes
+of all clusters that are used by the algorithm.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.prototypeValueHeuristic"></a></p>
+<h4 id="prototypevalueheuristic">prototypeValueHeuristic</h4>
+<pre><code class="language-python"> | @property
+ | prototypeValueHeuristic() -&gt; IPrototypeValue
+</code></pre>
+<p>This property stores the heuristic function that is used to compute the value of a prototype.</p>
+<p><strong>Returns</strong>:</p>
+<p>The heuristic function that is used to compute the value of a prototype.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.sequenceStore"></a></p>
+<h4 id="sequencestore">sequenceStore</h4>
+<pre><code class="language-python"> | @property
+ | sequenceStore() -&gt; SequenceStore
+</code></pre>
+<p>This property stores the buffer of sequences that is currently not used in the algorithm, but could be used
+in the future to store sequences that are likely to be assigned incorrectly.</p>
+<p><strong>Returns</strong>:</p>
+<p>The buffer of sequences that is currently not used in the algorithm, but could be used
+in the future to store sequences that are likely to be assigned incorrectly.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.__init__"></a></p>
+<h4 id="__init___16">__init__</h4>
+<pre><code class="language-python"> | __init__(dataSource: IDataSource, distanceMeasure: IDistanceMeasure, numClusters: int, numRepresentativePrototypes: int, numPrototypes: int, bufferSize: int, minimumRepresentativeness: float, prototypeValueHeuristic: IPrototypeValue, clusterAssignment: bool, buffering: bool) -&gt; None
+</code></pre>
+<p>This method initializes the 'SeqClu' algorithm with a data source, distance measure, number of clusters
+and number of prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>dataSource</code>: The data source that should be used in the 'SeqClu' algorithm.</li>
+<li><code>distanceMeasure</code>: The distance measure that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numClusters</code>: The number of clusters that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numRepresentativePrototypes</code>: The number of representative prototypes.</li>
+<li><code>numPrototypes</code>: The number of prototypes that should be used in the 'SeqClu' algorithm.'</li>
+<li><code>bufferSize</code>: The maximum size of the buffer.</li>
+<li><code>minimumRepresentativeness</code>: The minimum representativeness that the prototypes should have in order
+for approximation of the distance to the cluster to be used. If the prototypes are not representative
+enough, the accurate distance to the cluster is computed instead.</li>
+<li><code>prototypeValueHeuristic</code>: The heuristic function that is used to compute the value of a prototype.</li>
+<li><code>clusterAssignment</code>: A boolean value indicating whether or not to approximate the distance to the
+cluster.</li>
+<li><code>buffering</code>: A boolean value indicating whether or not the buffering feature should be used.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqClu.SeqClu.alreadyProcessed"></a></p>
+<h4 id="alreadyprocessed">alreadyProcessed</h4>
+<pre><code class="language-python"> | alreadyProcessed(sequenceHash: str) -&gt; bool
+</code></pre>
+<p>This method determines if a sequence, identified by its hash, was already processed in the past.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequenceHash</code>: The hash of the sequence for which needs to be determined whether or not it was already
+processed in the past.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the sequence was already processed in the past.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.execute"></a></p>
+<h4 id="execute_1">execute</h4>
+<pre><code class="language-python"> | execute() -&gt; None
+</code></pre>
+<p>This method executes the 'SeqClu' algorithm from start to finish. The main loop over the data is
+implemented in here.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqClu.SeqClu.forceProcessBuffer"></a></p>
+<h4 id="forceprocessbuffer">forceProcessBuffer</h4>
+<pre><code class="language-python"> | forceProcessBuffer(persist: bool, tick: int) -&gt; List[ClusterStore]
+</code></pre>
+<p>This method forcefully processes the buffer of candidate prototypes. The buffer is then empty again and can
+fill up over time in the ticks that are to come.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>persist</code>: A boolean value indicating whether or not to persist this action. If this value is set to
+false, the resulting list of clusters is returned, but all other data structures remain the same as before
+executing this method.</li>
+<li><code>tick</code>: The tick at which the buffer is forcefully processed.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The clusters that are obtained after forcefully processing the buffer.</p>
+<p><a name="seqclupv.SeqClu.SeqClu.processSequence"></a></p>
+<h4 id="processsequence_1">processSequence</h4>
+<pre><code class="language-python"> | processSequence(sequence: Tuple[str, ndarray], considerCandidacy: bool) -&gt; None
+</code></pre>
+<p>This method processes one sequence of the data set that is processed in the 'SeqClu' algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence that should be processed in the 'SeqClu' algorithm.</li>
+<li><code>considerCandidacy</code>: A boolean value indicating whether or not the algorithm should consider if the
+sequence could be a prototype for any of the clusters.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqCluBaselineOffline"></a></p>
+<h1 id="seqclupvseqclubaselineoffline">seqclupv.SeqCluBaselineOffline</h1>
+<p>This module contains an implementation of the offline version of the 'SeqClu' algorithm that is based on
+Partitioning Around Medoids (PAM).</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline"></a></p>
+<h2 id="seqclubaselineoffline-objects">SeqCluBaselineOffline Objects</h2>
+<pre><code class="language-python">class SeqCluBaselineOffline(ISeqClu)
+</code></pre>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.initializeClusters"></a></p>
+<h4 id="initializeclusters_1">initializeClusters</h4>
+<pre><code class="language-python"> | @staticmethod
+ | initializeClusters(numClusters: int, numPrototypes: int) -&gt; ndarray
+</code></pre>
+<p>This method initializes the clusters of the 'SeqClu' algorithm given a number of clusters and prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>numClusters</code>: The number of clusters that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numPrototypes</code>: The number of prototypes that should be used in the 'SeqClu' algorithm.'</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The indices of the prototypes for all the clusters, stored in a two-dimensional array.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.currentConfigurationCost"></a></p>
+<h4 id="currentconfigurationcost">currentConfigurationCost</h4>
+<pre><code class="language-python"> | @property
+ | currentConfigurationCost() -&gt; float
+</code></pre>
+<p>This property stores the cost of the current configuration.</p>
+<p><strong>Returns</strong>:</p>
+<p>A float representing the cost of the current configuration.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.data"></a></p>
+<h4 id="data_4">data</h4>
+<pre><code class="language-python"> | @property
+ | data() -&gt; List[ndarray]
+</code></pre>
+<p>This property stores the data that are processed by the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The data that are processed by the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.dataSize"></a></p>
+<h4 id="datasize_1">dataSize</h4>
+<pre><code class="language-python"> | @property
+ | dataSize() -&gt; int
+</code></pre>
+<p>This property stores the number of sequences that the data set contains.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the number of sequences that the data set contains.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.distances"></a></p>
+<h4 id="distances_2">distances</h4>
+<pre><code class="language-python"> | @property
+ | distances() -&gt; ndarray
+</code></pre>
+<p>This property stores the pair-wise distances for all pairs of sequences in the data set that is processed
+by the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>A two-dimensional array that contains the pair-wise distances for all pairs of sequences in the
+data set that is processed by the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.clusters"></a></p>
+<h4 id="clusters_1">clusters</h4>
+<pre><code class="language-python"> | @property
+ | clusters() -&gt; ndarray
+</code></pre>
+<p>This property stores the current configuration as a two-dimensional array containing the indices of the
+prototypes for every cluster.</p>
+<p><strong>Returns</strong>:</p>
+<p>The current configuration as a two-dimensional array containing the indices of the
+prototypes for every cluster.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.finalLabels"></a></p>
+<h4 id="finallabels_2">finalLabels</h4>
+<pre><code class="language-python"> | @property
+ | finalLabels() -&gt; Tuple[ndarray, Dict[str, int]]
+</code></pre>
+<p>This property stores the correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><strong>Returns</strong>:</p>
+<p>The correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.labels"></a></p>
+<h4 id="labels_2">labels</h4>
+<pre><code class="language-python"> | @property
+ | labels() -&gt; ndarray
+</code></pre>
+<p>This property stores the labels of all sequences that are not prototypes in the 'SeqClu' algorithm.</p>
+<p><strong>Returns</strong>:</p>
+<p>The labels of all sequences that are not prototypes in the 'SeqClu' algorithm.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.maxTicks"></a></p>
+<h4 id="maxticks">maxTicks</h4>
+<pre><code class="language-python"> | @property
+ | maxTicks() -&gt; int
+</code></pre>
+<p>This property stores the maximum number of ticks the algorithm is allowed to execute.</p>
+<p><strong>Returns</strong>:</p>
+<p>An integer representing the maximum number of ticks the algorithm is allowed to execute.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.time"></a></p>
+<h4 id="time">time</h4>
+<pre><code class="language-python"> | @property
+ | time() -&gt; float
+</code></pre>
+<p>This property stores the time it took the algorithm to initialize itself.</p>
+<p><strong>Returns</strong>:</p>
+<p>A float representing the number of seconds it took the algorithm to initialize itself.</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.__init__"></a></p>
+<h4 id="__init___17">__init__</h4>
+<pre><code class="language-python"> | __init__(fakeDataSource: FakeDataSource, distanceMeasure: IDistanceMeasure, numClusters: int, numPrototypes: int, maxTicks: int) -&gt; None
+</code></pre>
+<p>This method initializes the 'SeqClu' algorithm with a data source, distance measure, number of clusters
+and number of prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>fakeDataSource</code>: The fake data source that should be used in the 'SeqClu' algorithm.</li>
+<li><code>distanceMeasure</code>: The distance measure that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numClusters</code>: The number of clusters that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numPrototypes</code>: The number of prototypes that should be used in the 'SeqClu' algorithm.</li>
+<li><code>maxTicks</code>: The maximum number of ticks that the algorithm is allowed to execute.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.execute"></a></p>
+<h4 id="execute_2">execute</h4>
+<pre><code class="language-python"> | execute() -&gt; None
+</code></pre>
+<p>This method executes the 'SeqClu' algorithm from start to finish. The main loop over the data is
+implemented in here.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqCluBaselineOffline.SeqCluBaselineOffline.processSequence"></a></p>
+<h4 id="processsequence_2">processSequence</h4>
+<pre><code class="language-python"> | processSequence(sequence: Tuple[str, ndarray], considerCandidacy: bool) -&gt; None
+</code></pre>
+<p>Since this algorithm is the offline variant of the algorithm, sequences are not processed one-by-one, but
+all at once in an iterative fashion. This method should never be called.</p>
+<p><a name="seqclupv.SeqCluBaselineOnline"></a></p>
+<h1 id="seqclupvseqclubaselineonline">seqclupv.SeqCluBaselineOnline</h1>
+<p>This module contains a naive implementation of the online version of the 'SeqClu' algorithm that is used to compare
+the results of the developed variants of the 'SeqClu' algorithm to the results of the implementation contained in
+this module that serves as the baseline.</p>
+<p><a name="seqclupv.SeqCluBaselineOnline.SeqCluBaselineOnline"></a></p>
+<h2 id="seqclubaselineonline-objects">SeqCluBaselineOnline Objects</h2>
+<pre><code class="language-python">class SeqCluBaselineOnline(ISeqClu)
+</code></pre>
+<p><a name="seqclupv.SeqCluBaselineOnline.SeqCluBaselineOnline.finalLabels"></a></p>
+<h4 id="finallabels_3">finalLabels</h4>
+<pre><code class="language-python"> | @property
+ | finalLabels() -&gt; Dict[str, Union[chr, int]]
+</code></pre>
+<p>This property stores the correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><strong>Returns</strong>:</p>
+<p>The correct labels as a dictionary where the keys are the hashes of the sequences
+and the values are the correct labels.</p>
+<p><a name="seqclupv.SeqCluBaselineOnline.SeqCluBaselineOnline.__init__"></a></p>
+<h4 id="__init___18">__init__</h4>
+<pre><code class="language-python"> | __init__(dataSource: FakeDataSource, distanceMeasure: IDistanceMeasure, numClusters: int, numPrototypes: int) -&gt; None
+</code></pre>
+<p>This method initializes the 'SeqClu' algorithm with a data source, distance measure, number of clusters
+and number of prototypes.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>dataSource</code>: The data source that should be used in the 'SeqClu' algorithm.</li>
+<li><code>distanceMeasure</code>: The distance measure that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numClusters</code>: The number of clusters that should be used in the 'SeqClu' algorithm.</li>
+<li><code>numPrototypes</code>: The number of prototypes that should be used in the 'SeqClu' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqCluBaselineOnline.SeqCluBaselineOnline.execute"></a></p>
+<h4 id="execute_3">execute</h4>
+<pre><code class="language-python"> | execute() -&gt; None
+</code></pre>
+<p>This method executes the 'SeqClu' algorithm from start to finish. The main loop over the data is
+implemented in here.</p>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.SeqCluBaselineOnline.SeqCluBaselineOnline.processSequence"></a></p>
+<h4 id="processsequence_3">processSequence</h4>
+<pre><code class="language-python"> | processSequence(sequence: Tuple[str, ndarray], considerCandidacy: bool) -&gt; None
+</code></pre>
+<p>This method processes one sequence of the data set that is processed in the 'SeqClu' algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>sequence</code>: The sequence that should be processed in the 'SeqClu' algorithm.</li>
+<li><code>considerCandidacy</code>: A boolean value indicating whether or not the algorithm should consider if the
+sequence could be a prototype for any of the clusters.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
+<p><a name="seqclupv.__main__"></a></p>
+<h1 id="seqclupv__main__">seqclupv.__main__</h1>
+<p>This module contains a command-line interface that can be used to run experiments on the HPC cluster.</p>
+<p><a name="seqclupv.__main__.areCurveParameters"></a></p>
+<h4 id="arecurveparameters">areCurveParameters</h4>
+<pre><code class="language-python">areCurveParameters(parameters: list) -&gt; bool
+</code></pre>
+<p>This method verifies whether or not a list of parameters has the format of parameters that are used to
+generate a data set of sequences from a sine curve.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>parameters</code>: A list of parameters for which needs to be verified whether or not it has the format of
+parameters that are used to generate a data set of sequences from a sine curve.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the given list of parameters has the format of parameters
+that are used to generate a data set of sequences from a sine curve.</p>
+<p><a name="seqclupv.__main__.areStringParameters"></a></p>
+<h4 id="arestringparameters">areStringParameters</h4>
+<pre><code class="language-python">areStringParameters(parameters: list) -&gt; bool
+</code></pre>
+<p>This method verifies whether or not all values in the list are strings.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>parameters</code>: A list of parameters for which needs to be verified whether or not all values in it
+are strings.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not all values in the given list of parameters are strings.</p>
+<p><a name="seqclupv.__main__.areSeqCluParameters"></a></p>
+<h4 id="areseqcluparameters">areSeqCluParameters</h4>
+<pre><code class="language-python">areSeqCluParameters(parameters: list) -&gt; bool
+</code></pre>
+<p>This method verifies whether or not a list of parameters has the format of parameters that are used to
+configure the 'SeqClu-PV' algorithm.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>parameters</code>: A list of parameters for which needs to be verified whether or not it has the format of
+parameters that are used to configure the 'SeqClu-PV' algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the given list of parameters has the format of parameters
+that are used to configure the 'SeqClu-PV' algorithm.</p>
+<p><a name="seqclupv.__main__.areTimeSeriesClassificationParameters"></a></p>
+<h4 id="aretimeseriesclassificationparameters">areTimeSeriesClassificationParameters</h4>
+<pre><code class="language-python">areTimeSeriesClassificationParameters(parameters: list) -&gt; bool
+</code></pre>
+<p>This method verifies whether or not a list of parameters has the format of parameters that are used to
+load a data set of sequences from data files downloaded from TimeSeriesClassification.com.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>parameters</code>: A list of parameters for which needs to be verified whether or not it has the format of
+parameters that are used to load a data set of sequences from data files downloaded from
+TimeSeriesClassification.com.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the given list of parameters has the format of parameters
+that are used to load a data set of sequences from data files downloaded from TimeSeriesClassification.com.</p>
+<p><a name="seqclupv.__main__.parseBool"></a></p>
+<h4 id="parsebool">parseBool</h4>
+<pre><code class="language-python">parseBool(string: str) -&gt; bool
+</code></pre>
+<p>This method parses a string to a boolean.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>string</code>: The string that needs to be parsed to a boolean.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>The boolean equivalent of the passed string.</p>
+<p><a name="seqclupv.__main__.main"></a></p>
+<h4 id="main_1">main</h4>
+<pre><code class="language-python">main(argv) -&gt; None
+</code></pre>
+<p>This method is the main method for the command-line interface of 'SeqClu-PV'. All arguments for the algorithm
+are passed via 'argv' and the algorithm is then configured and run.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>argv</code>: The parameters that are required to configure the algorithm.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

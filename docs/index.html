@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>SeqCluPV</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">SeqCluPV</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li >
+                                <a href="api-documentation/index.html">API documentation</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="api-documentation/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#about-the-project">About the project</a></li>
+            <li><a href="#built-with">Built with</a></li>
+        <li class="main "><a href="#getting-started">Getting started</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#installation-from-pypi">Installation from PyPI</a></li>
+            <li><a href="#installation-from-source">Installation from source</a></li>
+        <li class="main "><a href="#usage">Usage</a></li>
+        <li class="main "><a href="#roadmap">Roadmap</a></li>
+        <li class="main "><a href="#contributing">Contributing</a></li>
+        <li class="main "><a href="#license">License</a></li>
+        <li class="main "><a href="#contact">Contact</a></li>
+        <li class="main "><a href="#acknowledgements">Acknowledgements</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+***
+***
+***
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** rtewierik, seqclupv, twitter_handle, email, project_title, project_description
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+<p><a href="https://github.com/rtewierik/seqclupv/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/rtewierik/seqclupv.svg?style=for-the-badge" /></a>
+<a href="https://github.com/rtewierik/seqclupv/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/rtewierik/seqclupv.svg?style=for-the-badge" /></a>
+<a href="https://github.com/rtewierik/seqclupv/stargazers"><img alt="Stargazers" src="https://img.shields.io/github/stars/rtewierik/seqclupv.svg?style=for-the-badge" /></a>
+<a href="https://github.com/rtewierik/seqclupv/issues"><img alt="Issues" src="https://img.shields.io/github/issues/rtewierik/seqclupv.svg?style=for-the-badge" /></a>
+<a href="https://github.com/rtewierik/seqclupv/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/rtewierik/seqclupv.svg?style=for-the-badge" /></a>
+<a href="https://www.linkedin.com/in/rtewierik/"><img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&amp;logo=linkedin&amp;colorB=555" /></a></p>
+<!-- PROJECT LOGO -->
+<p><br /></p>
+<p align="center">
+  <a href="https://github.com/rtewierik/seqclupv"></a>
+
+  <h3 align="center">SeqCluPV - Real-time sequence clustering using prototype voting</h3>
+  <p align="center">
+    <a href="https://github.com/rtewierik/seqclupv"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/rtewierik/seqclupv/issues">Report bug</a>
+    ·
+    <a href="https://github.com/rtewierik/seqclupv/issues">Request feature</a>
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About the project</a>
+      <ul>
+        <li><a href="#built-with">Built with</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="about-the-project">About the project</h2>
+<p>This project, called <em>SeqCluPV</em> is an extension of the original <em>SeqClu</em> algorithm, developed by Dr.ir. Sicco Verwer of the <em>Delft University of Technology</em>, that is characterized by voting for cluster prototypes. The framework has been developed as part of the course <em>CSE3000 Research Project</em> at the <em>Delft University of Technology</em>. For instructions on how to get a local copy up and running, please refer to the <a href="#getting-started">Getting started</a> section.</p>
+<h3 id="built-with">Built with</h3>
+<ul>
+<li><a href="https://pypi.org/project/numpy/">NumPy</a></li>
+<li><a href="https://pypi.org/project/fastdtw/">FastDTW</a></li>
+<li><a href="https://pypi.org/project/scipy/">SciPy</a></li>
+<li><a href="https://pypi.org/project/pandas/">Pandas</a></li>
+<li><a href="https://pypi.org/project/scikit-learn/">Scikit-learn</a></li>
+<li><a href="https://pypi.org/project/seaborn/">Seaborn</a></li>
+<li><a href="https://pypi.org/project/matplotlib/">Matplotlib</a></li>
+</ul>
+<!-- GETTING STARTED -->
+<h2 id="getting-started">Getting started</h2>
+<p>To get a local copy up and running follow these simple steps.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The project was made with Python 3.9, hence having Python 3.9 installed is a prerequisite.</p>
+<h3 id="installation-from-pypi">Installation from PyPI</h3>
+<ol>
+<li>Install Cython
+   <code>pip install Cython</code></li>
+<li>Clone the <em>sktime</em> repository in a separate directory
+   <code>git clone https://github.com/alan-turing-institute/sktime.git</code></li>
+<li>After navigating to the <em>sktime</em> project root, install <em>sktime</em>
+   <code>python setup.py install</code></li>
+<li>Install <em>SeqCluPV</em>
+   <code>pip install seqclupv</code></li>
+</ol>
+<h3 id="installation-from-source">Installation from source</h3>
+<ol>
+<li>Clone the repo
+   <code>git clone https://github.com/rtewierik/seqclupv.git</code></li>
+<li>Install Cython
+   <code>pip install Cython</code></li>
+<li>Clone the <em>sktime</em> repository in a separate directory
+   <code>git clone https://github.com/alan-turing-institute/sktime.git</code></li>
+<li>After navigating to the <em>sktime</em> project root, install <em>sktime</em>
+   <code>python setup.py install</code></li>
+<li>After navigating to the <em>SeqCluPV</em> project root, install <em>SeqCluPV</em>
+   <code>python setup.py install</code></li>
+</ol>
+<!-- USAGE EXAMPLES -->
+<h2 id="usage">Usage</h2>
+<p>The algorithm can be run on three data sets, which are the following.</p>
+<ol>
+<li>GesturePebbleZ1 (http://www.timeseriesclassification.com/description.php?Dataset=GesturePebbleZ1)</li>
+<li>UJI Pen Characters (https://archive.ics.uci.edu/ml/datasets/UJI+Pen+Characters)</li>
+<li>PLAID (http://www.timeseriesclassification.com/description.php?Dataset=PLAID)</li>
+</ol>
+<p>The command-line interface can be used as follows.</p>
+<pre>
+python -m seqclupv <i>numPrototypes</i> <i>numRepresentativePrototypes</i> <i>maxPerTick</i> <i>dataSourceParameters</i> <i>seqCluParameters</i> <i>maxIter</i> <i>online</i> <i>onlySeqClu</i> <i>experimentName</i>
+</pre>
+
+<p>The potential values for the above parameters are as follows.</p>
+<ul>
+<li><strong>numPrototypes:</strong> <em>integer</em> - The number of prototypes that will be used by all variants of the algorithm.</li>
+<li><strong>numRepresentativePrototypes:</strong> <em>integer</em> - The number of representative prototypes that will be used by all variants of the algorithm.</li>
+<li><strong>maxPerTick:</strong> <em>integer</em> - The maximum amount of sequences that can be processed per tick.</li>
+<li><strong>dataSourceParameters:</strong> <em>list[character]</em> or <em>list[boolean,string]</em> - The two data sources that can be used are the handwritten character data source and the data source for the data sets from <em>TimeSeriesClassification.com</em>. For the handwritten character data source, this parameter is a JSON-formatted list of characters, where you can choose from the characters <em>['C', 'U', 'V', 'W', 'S', 'O', '1', '2', '3', '5', '6', '8', '9']</em>. For the data sets from <em>TimeSeriesClassification.com</em>, this parameter is a list with two items, namely a boolean and a string in that order. The boolean value indicates whether or not the pair-wise distances between all items in the data set should be computed upfront, the string represents the name of the data set that is used. This string can be either of <em>[\"pebble\",\"plaid\"]</em>. <strong>NOTE: Since the list is JSON-formatted, the boolean values should be either <em>true</em> or <em>false</em>. Moreover, spaces are NOT allowed.</strong></li>
+<li><strong>seqCluParameters:</strong> <em>list[integer, float, float, boolean, boolean]</em> - The values in the list represent the following parameters in that order.</li>
+<li><strong>bufferSize:</strong> <em>integer</em> - The maximum size of the buffer.</li>
+<li><strong>minimumRepresentativeness:</strong> - <em>float</em> - The minimum average representativeness that prototypes should have in order for the distance computation from a sequence to the cluster that the prototypes represent to be approximated.</li>
+<li><strong>prototypeValueratio:</strong> - <em>float</em> - The value 'a' in a:1 where a:1 is the ratio between the representativeness and the weight. This ratio is used to compute the value of a prototype as a linear combination of the representativeness and the weight of the prototype.</li>
+<li><strong>clusterAssignment:</strong> - <em>boolean</em> - A boolean value indicating whether or not to approximate the distance to the cluster. <strong>NOTE: Since the list is JSON-formatted, the boolean values should be either <em>true</em> or <em>false</em>. Moreover, spaces are NOT allowed.</strong></li>
+<li><strong>buffering:</strong> - <em>boolean</em> - A boolean value indicating whether or not the buffering feature should be used. <strong>NOTE: Since the list is JSON-formatted, the boolean values should be either <em>true</em> or <em>false</em>. Moreover, spaces are NOT allowed.</strong></li>
+<li><strong>maxIter:</strong> <em>integer</em> - The maximum number of iterations that the offline baseline variant of the algorithm is allowed to execute. <strong>NOTE: This parameter is only needed when <em>online</em> and <em>onlySeqClu</em> are set to <em>False</em>, in other cases any integer is fine and the input will be ignored.</strong></li>
+<li><strong>online:</strong> <em>boolean</em> - A boolean value that will result in executing the online baseline variant of the SeqClu algorithm if set to true and the offline baseline variant of the algorithm if set to false. <strong>NOTE: Only the values 'True' or 'False' are possible here.</strong></li>
+<li><strong>onlySeqClu:</strong> <em>boolean</em> - A boolean value indicating whether or not only the SeqClu algorithm should be executed. <strong>NOTE: Only the values 'True' or 'False' are possible here.</strong></li>
+<li><strong>experimentName:</strong> <em>string</em> - The name of the experiment. This is used to compare the prototypes at the end of executing (online baseline variant of) the SeqClu algorithm. The possible values can be <em>o29</em>, <em>o295w</em> and <em>pebbleFull</em>.</li>
+</ul>
+<p>A few examples of commands that are executed to run specific experiments are as follows.</p>
+<p><strong>Experiment with characters O, 2 and 9 of handwritten character data set using both the SeqClu algorithm and the online baseline variant of the SeqClu algorithm</strong></p>
+<pre><code>python -m seqclupv 8 3 1 [\&quot;O\&quot;,\&quot;2\&quot;,\&quot;9\&quot;]  [15,0.5,2.0,false,true] 0 True True o29
+</code></pre>
+<p><strong>Experiment with Pebble data set using just the SeqClu algorithm</strong></p>
+<pre><code>python -m seqclupv 8 3 1 [false,\&quot;pebble\&quot;]  [15,0.5,3.0,true,false] 0 True True pebbleFull
+</code></pre>
+<!-- ROADMAP -->
+<h2 id="roadmap">Roadmap</h2>
+<p>See the <a href="https://github.com/rtewierik/seqclupv/issues">open issues</a> for a list of proposed features (and known issues).</p>
+<!-- CONTRIBUTING -->
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+<ol>
+<li>Fork the project</li>
+<li>Create your feature branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>Commit your changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>Push to the branch (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>Open a pull request</li>
+</ol>
+<!-- LICENSE -->
+<h2 id="license">License</h2>
+<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>
+<!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+<p>R.E.C. te Wierik - rtewierik64@gmail.com</p>
+<p>Project link: <a href="https://github.com/rtewierik/seqclupv">https://github.com/rtewierik/seqclupv</a></p>
+<!-- ACKNOWLEDGEMENTS -->
+<h2 id="acknowledgements">Acknowledgements</h2>
+<ul>
+<li><a href="https://github.com/othneildrew/Best-README-Template">README template</a></li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links --></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0
+Build Date UTC : 2021-06-18 18:45:40
+-->
