@@ -137,7 +137,7 @@ def main(argv) -> None:
     if areStringParameters(dataSourceParameters):
         classes = dataSourceParameters
         dataGenerator = HandwrittenCharacterGenerator(classes, numPrototypes, computeDistances)
-        fakeDataSource = FakeDataSource(maxPerTick, [dataGenerator], numPrototypes, classes)
+        fakeDataSource = FakeDataSource(maxPerTick, [dataGenerator], numPrototypes, computeDistances, classes)
     elif areTimeSeriesClassificationParameters(dataSourceParameters):
         computeDistribution = dataSourceParameters[0]
         dataSetName = dataSourceParameters[1]
@@ -149,7 +149,8 @@ def main(argv) -> None:
             raise ValueError("Invalid data set name provided.")
         dataGenerator.generateData()
         numClusters = len(dataGenerator.classes)
-        fakeDataSource = FakeDataSource(maxPerTick, [dataGenerator], numPrototypes, dataGenerator.classes)
+        fakeDataSource = FakeDataSource(maxPerTick, [dataGenerator], numPrototypes, computeDistances,
+                                        dataGenerator.classes)
     elif all(areCurveParameters(elem) for elem in dataSourceParameters):
         dataGenerators = []
         for parameters in dataSourceParameters:
@@ -157,7 +158,7 @@ def main(argv) -> None:
                                                  parameters[3], parameters[4], parameters[5], numPrototypes,
                                                  computeDistances))
         classes = list(range(numClusters))
-        fakeDataSource = FakeDataSource(maxPerTick, dataGenerators, numPrototypes, classes)
+        fakeDataSource = FakeDataSource(maxPerTick, dataGenerators, numPrototypes, computeDistances, classes)
     else:
         raise ValueError("Data source parameters are not handwritten character or curve generator parameters.")
 

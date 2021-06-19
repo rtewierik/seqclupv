@@ -50,7 +50,7 @@
                                 <a href="../index.html">Home</a>
                             </li>
                             <li class="active">
-                                <a href="./index.html">API documentation</a>
+                                <a href="./">API documentation</a>
                             </li>
                         </ul>
 
@@ -551,7 +551,7 @@ present in the data provided by the data source.</p>
 <p>void</p>
 <p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.__init__"></a></p>
 <h4 id="__init___5">__init__</h4>
-<pre><code class="language-python"> | __init__(maxPerTick: int, dataGenerators: List[IDataGenerator], numPrototypes: int, classes: List[Union[chr, int]]) -&gt; None
+<pre><code class="language-python"> | __init__(maxPerTick: int, dataGenerators: List[IDataGenerator], numPrototypes: int, computeDistances: bool, classes: List[Union[chr, int]]) -&gt; None
 </code></pre>
 <p>This method initializes the data source given the maximum number of data per tick, the data generators
 that should be used to generate the data provided by the data source and the number of prototypes
@@ -562,6 +562,8 @@ that is used in the 'SeqClu' algorithm.</p>
 <li><code>dataGenerators</code>: The data generators that should be used to
 generate the data provided by the data source.</li>
 <li><code>numPrototypes</code>: The number of prototypes that is used in the 'SeqClu' algorithm.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between items
+in the data set should be computed.</li>
 <li><code>classes</code>: All the classes that should be present in the data provided by the data source.</li>
 </ul>
 <p><a name="seqclupv.library.data_source.fake_data_source.FakeDataSource.advanceTick"></a></p>

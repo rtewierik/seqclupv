@@ -159,7 +159,7 @@ class FakeDataSource(IFakeDataSource, IDataGenerator):
     # CONSTRUCTOR #
 
     def __init__(self, maxPerTick: int, dataGenerators: List[IDataGenerator],
-                 numPrototypes: int, classes: List[Union[chr, int]]) -> None:
+                 numPrototypes: int, computeDistances: bool, classes: List[Union[chr, int]]) -> None:
         """
             This method initializes the data source given the maximum number of data per tick, the data generators
             that should be used to generate the data provided by the data source and the number of prototypes
@@ -169,9 +169,11 @@ class FakeDataSource(IFakeDataSource, IDataGenerator):
             :param dataGenerators: The data generators that should be used to
             generate the data provided by the data source.
             :param numPrototypes: The number of prototypes that is used in the 'SeqClu' algorithm.
+            :param computeDistances: A boolean value indicating whether or not the pair-wise distances between items
+            in the data set should be computed.
             :param classes: All the classes that should be present in the data provided by the data source.
         """
-        super().__init__(numPrototypes)
+        super().__init__(numPrototypes, computeDistances)
         self._actualLabels = None
         self._currentIndex = 0
         self._currentTick = -1
