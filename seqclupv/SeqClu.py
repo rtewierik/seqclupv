@@ -457,7 +457,7 @@ class SeqClu(ISeqClu):
         for cluster in self.clusters:
             if sequenceHash in cluster.prototypes.prototypes:
                 return True
-        return sequenceHash in self.candidateStore.candidates or sequenceHash in self.labels
+        return sequenceHash in self.candidateStore.candidates
 
     def execute(self) -> None:
         """

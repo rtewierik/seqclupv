@@ -115,6 +115,7 @@ def main(argv) -> None:
     online = parseBool(argv[7])
     onlySeqClu = parseBool(argv[8])
     experimentName = argv[9]
+    computeDistances = not online and not onlySeqClu
 
     numClusters = len(dataSourceParameters)
 
@@ -135,7 +136,7 @@ def main(argv) -> None:
     # 'areStringParameters' can be interpreted as 'areHandwrittenParameters'.
     if areStringParameters(dataSourceParameters):
         classes = dataSourceParameters
-        dataGenerator = HandwrittenCharacterGenerator(classes, numPrototypes)
+        dataGenerator = HandwrittenCharacterGenerator(classes, numPrototypes, computeDistances)
         fakeDataSource = FakeDataSource(maxPerTick, [dataGenerator], numPrototypes, classes)
     elif areTimeSeriesClassificationParameters(dataSourceParameters):
         computeDistribution = dataSourceParameters[0]
@@ -153,7 +154,8 @@ def main(argv) -> None:
         dataGenerators = []
         for parameters in dataSourceParameters:
             dataGenerators.append(CurveGenerator(parameters[0], (parameters[1], parameters[2]),
-                                                 parameters[3], parameters[4], parameters[5]))
+                                                 parameters[3], parameters[4], parameters[5], numPrototypes,
+                                                 computeDistances))
         classes = list(range(numClusters))
         fakeDataSource = FakeDataSource(maxPerTick, dataGenerators, numPrototypes, classes)
     else:

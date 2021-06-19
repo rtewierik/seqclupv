@@ -36,6 +36,17 @@ class IDataGenerator(ABC):
         return self._classDictionary
 
     @property
+    def computeDistances(self) -> bool:
+        """
+            This property stores a boolean value indicating whether or not the pair-wise distances between items in the
+            data set should be computed.
+
+            :return: A boolean value indicating whether or not the pair-wise distances between items in the
+            data set should be computed.
+        """
+        return self._computeDistances
+
+    @property
     def data(self) -> Optional[List[ndarray]]:
         """
             This property stores the data in the data set.
@@ -92,7 +103,7 @@ class IDataGenerator(ABC):
         """
         pass
 
-    def __init__(self, numPrototypes: int) -> None:
+    def __init__(self, numPrototypes: int, computeDistances: bool) -> None:
         """
             This method initializes the properties of the class.
 
@@ -101,6 +112,7 @@ class IDataGenerator(ABC):
         """
         self._classes = None
         self._classDictionary = None
+        self._computeDistances = computeDistances
         self._data = None
         self._distances = None
         self._indices = None

@@ -46,19 +46,6 @@ class TimeSeriesClassificationBase(IDataGenerator, ABC):
 
         return data, labels
 
-    # PROPERTIES #
-
-    @property
-    def computeDistances(self) -> bool:
-        """
-            This property stores a boolean value indicating whether or not the pair-wise distances between items in the
-            data set should be computed.
-
-            :return: A boolean value indicating whether or not the pair-wise distances between items in the
-            data set should be computed.
-        """
-        return self._computeDistances
-
     # CONSTRUCTOR
 
     def __init__(self, numPrototypes: int, computeDistances: bool) -> None:
@@ -131,5 +118,7 @@ class TimeSeriesClassificationBase(IDataGenerator, ABC):
                         distances[j][i] = _d
 
             self._distances = distances
+        else:
+            self._distances = None
 
         return self.data, labelResult

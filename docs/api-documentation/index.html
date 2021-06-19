@@ -61,7 +61,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../index.html">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -217,7 +217,7 @@ a list of sequences that belong to this class.</p>
 </code></pre>
 <p><a name="seqclupv.library.data_generator.handwritten_character_generator.HandwrittenCharacterGenerator.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
-<pre><code class="language-python"> | __init__(classes: List[chr], numPrototypes: int) -&gt; None
+<pre><code class="language-python"> | __init__(classes: List[chr], numPrototypes: int, computeDistances: bool) -&gt; None
 </code></pre>
 <p>This method initializes the data generator with a given list of classes that the
 generated data set should contain.</p>
@@ -225,6 +225,8 @@ generated data set should contain.</p>
 <ul>
 <li><code>classes</code>: The classes that are present in the data set as a list of characters.</li>
 <li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between items
+in the data set should be computed.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>void</p>
@@ -354,7 +356,7 @@ that will be used as the frequency.</p>
 <p>An integer representing the rate at which samples are generated.</p>
 <p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.__init__"></a></p>
 <h4 id="__init___3">__init__</h4>
-<pre><code class="language-python"> | __init__(n: int, freq: Tuple[float, float], samplingRate: int, error: float, phase: int) -&gt; None
+<pre><code class="language-python"> | __init__(n: int, freq: Tuple[float, float], samplingRate: int, error: float, phase: int, numPrototypes: int, computeDistances: bool) -&gt; None
 </code></pre>
 <p>This method initializes the data generator that is applicable to the sine curve data set with the parameters
 that are required to generate the data set.</p>
@@ -365,7 +367,12 @@ that are required to generate the data set.</p>
 <li><code>samplingRate</code>: The rate at which samples are generated.</li>
 <li><code>error</code>: The error factor used to add noise to samples.</li>
 <li><code>phase</code>: The phase that is used to generate the sine curve.</li>
+<li><code>numPrototypes</code>: The number of prototypes that will be used in the 'SeqClu' algorithm.</li>
+<li><code>computeDistances</code>: A boolean value indicating whether or not the pair-wise distances between items
+in the data set should be computed.</li>
 </ul>
+<p><strong>Returns</strong>:</p>
+<p>void</p>
 <p><a name="seqclupv.library.data_generator.sine_curve_generator.CurveGenerator.generateData"></a></p>
 <h4 id="generatedata_3">generateData</h4>
 <pre><code class="language-python"> | generateData() -&gt; List[Union[ndarray, list]]
@@ -396,16 +403,6 @@ https://www.timeseriesclassification.com that are passed to the 'SeqClu' algorit
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>The data that was loaded from all of the files.</p>
-<p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase.computeDistances"></a></p>
-<h4 id="computedistances">computeDistances</h4>
-<pre><code class="language-python"> | @property
- | computeDistances() -&gt; bool
-</code></pre>
-<p>This property stores a boolean value indicating whether or not the pair-wise distances between items in the
-data set should be computed.</p>
-<p><strong>Returns</strong>:</p>
-<p>A boolean value indicating whether or not the pair-wise distances between items in the
-data set should be computed.</p>
 <p><a name="seqclupv.library.data_generator.time_series_classification_base.TimeSeriesClassificationBase.__init__"></a></p>
 <h4 id="__init___4">__init__</h4>
 <pre><code class="language-python"> | __init__(numPrototypes: int, computeDistances: bool) -&gt; None
@@ -949,6 +946,16 @@ the classes of the items that are present in the data set.</p>
 that are present in the data set and the values are the indices of the classes that can be used to
 retrieve the data that belong to a given class from a two-dimensional list containing all items in the data
 set.</p>
+<p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.computeDistances"></a></p>
+<h4 id="computedistances">computeDistances</h4>
+<pre><code class="language-python"> | @property
+ | computeDistances() -&gt; bool
+</code></pre>
+<p>This property stores a boolean value indicating whether or not the pair-wise distances between items in the
+data set should be computed.</p>
+<p><strong>Returns</strong>:</p>
+<p>A boolean value indicating whether or not the pair-wise distances between items in the
+data set should be computed.</p>
 <p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.data"></a></p>
 <h4 id="data_2">data</h4>
 <pre><code class="language-python"> | @property
@@ -1002,7 +1009,7 @@ a list of sequences.</p>
 a list of sequences.</p>
 <p><a name="seqclupv.library.interfaces.data_generator.IDataGenerator.__init__"></a></p>
 <h4 id="__init___9">__init__</h4>
-<pre><code class="language-python"> | __init__(numPrototypes: int) -&gt; None
+<pre><code class="language-python"> | __init__(numPrototypes: int, computeDistances: bool) -&gt; None
 </code></pre>
 <p>This method initializes the properties of the class.</p>
 <p><strong>Arguments</strong>:</p>
