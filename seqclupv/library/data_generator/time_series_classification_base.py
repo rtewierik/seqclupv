@@ -58,8 +58,7 @@ class TimeSeriesClassificationBase(IDataGenerator, ABC):
             :param computeDistances: A boolean value indicating whether or not the pair-wise distances between items in
             the data set should be computed.
         """
-        super().__init__(numPrototypes)
-        self._computeDistances = computeDistances
+        super().__init__(numPrototypes, computeDistances)
 
     # PRIVATE METHODS #
 

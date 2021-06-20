@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="seqclupv",
-    version="1.0.0",
+    version="1.0.3",
     author="R. E. C. te Wierik",
     author_email="r.e.c.tewierik@student.tudelft.nl",
     description="An extension of the original 'SeqClu' algorithm that is characterized "
