@@ -1,0 +1,1376 @@
+[SeqCluCLI] Passed arguments are ['8', '3', '1', '["O","2","9","5","W"]', '[15,0.5,1.0,true,false]', '300', 'True', 'False', 'o295w'].
+[SeqCluCLI] Class 'W': 44 instances.
+[SeqCluCLI] Class 'O': 66 instances.
+[SeqCluCLI] Class '2': 22 instances.
+[SeqCluCLI] Class '5': 22 instances.
+[SeqCluCLI] Class '9': 22 instances.
+[SeqCluCLI] The number of sequences per class is <map object at 0x0000025A9AC20B20>.
+[SeqCluCLI] The total number of prototypes is 40.
+[SeqCluCLI] The number of incoming sequences is 136.
+[SeqCluCLI] The total number of sequences is 176.
+[SeqCluCLI] Labels provided by data set are as follows.
+['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', '2', '2', '2', '2', '2', '2', '2', '2', '9', '9', '9', '9', '9', '9', '9', '9', '5', '5', '5', '5', '5', '5', '5', '5', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', '5', '9', '5', 'O', '5', '2', 'O', '2', 'O', 'W', '9', 'O', 'W', 'O', '5', 'O', 'W', 'W', 'W', 'O', 'W', '2', 'W', 'O', '9', 'O', 'O', '5', 'W', '2', 'O', 'O', 'W', '5', 'W', 'O', '9', 'O', 'W', 'O', 'O', 'O', 'O', 'W', '2', '2', 'W', 'W', '5', 'O', 'O', 'O', 'W', 'O', 'O', 'O', 'W', '9', 'W', 'O', 'O', 'O', '9', 'W', 'W', '5', 'O', '2', 'O', '9', 'O', '9', '2', 'O', '2', '5', 'W', 'O', 'W', 'W', 'W', '9', 'O', 'W', '5', '2', '2', '9', 'O', '2', 'O', '9', '2', 'O', 'O', 'O', 'O', 'W', 'O', '5', 'O', 'W', 'O', 'O', 'O', 'O', 'O', 'W', 'O', 'W', 'O', 'W', 'O', '2', 'W', 'O', 'O', '9', 'W', 'O', 'O', '5', 'W', 'O', 'W', '5', '5', 'O', 'W', 'O', '9', 'W', 'O', '9', 'W', 'O']
+[SeqCluCLI] Labels including sequence hashes provided by fake data source are as follows.
+{'6756bc76': 'O', '74f89b04': 'O', '5ac133ba': 'O', '7420af12': 'O', '73691a6b': 'O', '2a64efc4': 'O', '9c479a03': 'O', 'adb1ff2e': 'O', '482fed89': '2', 'bf78cd68': '2', '76c30e17': '2', '472b7fc1': '2', '37a6ada9': '2', '89234e21': '2', '1332e09f': '2', '7913451a': '2', '69a451fd': '9', '03f9a7c2': '9', 'afb084b9': '9', '7b8a937e': '9', 'c3999a82': '9', 'a2c79076': '9', 'cedcc413': '9', '7ce0fa09': '9', '1a525726': '5', 'e9faa4cc': '5', 'eb1468b0': '5', 'e921b17e': '5', 'bbfa3eb0': '5', '77d9cb4e': '5', 'c417498f': '5', '3b071a8b': '5', '933deba4': 'W', '295ff276': 'W', 'bc2f57a1': 'W', '2ef44daf': 'W', '4f8ec214': 'W', '797a825c': 'W', '4cd6f30f': 'W', '80666255': 'W', '3f0aa84b': '5', '396fca49': '9', '4d52ec11': '5', '3e712c3b': 'O', 'cb30c29c': '5', 'e0b646d4': '2', 'c326d118': 'O', '24acc8e9': '2', '1d7d1496': 'O', '47d34cbb': 'W', '7b3de861': '9', 'ac173cf3': 'O', '50969267': 'W', '43a42008': 'O', '2ca204ac': '5', '352889ef': 'O', '06e40d21': 'W', '8dac6101': 'W', '715332c9': 'W', '73da52af': 'O', 'eb657780': 'W', '9809d07f': '2', 'ba6e7c4a': 'W', '8df29f81': 'O', 'a0e0db58': '9', 'c0176f15': 'O', 'f418fa11': 'O', '3ead38b7': '5', '4e2aa915': 'W', 'd29216c8': '2', 'b784c4b6': 'O', '2beceec1': 'O', '7a2e4832': 'W', 'b21c84cb': '5', '6e6e22ef': 'W', '7a77582d': 'O', '4ccb3dd9': '9', '3162588d': 'O', '89a684ef': 'W', '7e1a26ed': 'O', '6126b9c9': 'O', 'd6d1473c': 'O', '6f193b31': 'O', '449dbb2e': 'W', '1b1f4e89': '2', 'a37c250f': '2', '4eb1df54': 'W', 'ef4f8324': 'W', '0b371e7d': '5', 'bde6d686': 'O', 'cad8a262': 'O', 'bde8aa4e': 'O', '8d9c8fc1': 'W', 'a1264b54': 'O', '264ed0d0': 'O', 'cc0a3483': 'O', 'b74c2b1c': 'W', '29d8b0f5': '9', '7c4cd0d9': 'W', 'efeedd1f': 'O', 'dfec2275': 'O', 'bdf4fda1': 'O', 'fa61df8d': '9', 'b81c59f8': 'W', '2ca3d5cc': 'W', '0755e139': '5', '1fcd376a': 'O', 'a7fe6878': '2', '0f79569b': 'O', 'beeebf86': '9', '75ebc5d9': 'O', 'e6156839': '9', '677f5e8b': '2', 'e36aa35d': 'O', 'e75c9aab': '2', 'edcd0ecc': '5', '03b429ad': 'W', '3002d3e1': 'O', 'dc24ab44': 'W', 'cdf3709b': 'W', '349725c2': 'W', '07d5a3ee': '9', 'e659dff6': 'O', 'ccbf955f': 'W', '4f838114': '5', '93a1ddc9': '2', '41cf05ef': '2', '1a9e2f84': '9', '0a10826d': 'O', '7b41ff90': '2', 'c590f4da': 'O', 'b3c5643c': '9', '8d0e88b3': '2', 'f3453d3c': 'O', 'bd3f48df': 'O', '28ebbe0b': 'O', '8a130fb7': 'O', '6b2cde41': 'W', '16ff79cb': 'O', '84754bea': '5', '4ef8ba57': 'O', '966109b0': 'W', '17fc021f': 'O', 'f0881bae': 'O', '34f40742': 'O', '23d1ab56': 'O', '49b38b7f': 'O', '2e06ec79': 'W', '4ef46c45': 'O', 'a428da62': 'W', '2ac321dd': 'O', '78ae25b3': 'W', '473d46b8': 'O', 'd8db634f': '2', 'e43d7d4f': 'W', '3977b9db': 'O', 'c64b021a': 'O', '0dd66cc3': '9', '4e152017': 'W', '6b5e11b4': 'O', 'cda22c0d': 'O', '21b7fd73': '5', 'c2e5bc3b': 'W', 'ff24fe7c': 'O', '31d1966f': 'W', '2becc972': '5', 'ef7ca957': '5', '8ac4d5be': 'O', 'dae0ad4f': 'W', 'f08aaf85': 'O', '52eafac6': '9', '2371c6a2': 'W', '859a6067': 'O', '1085e61d': '9', '199e6dc7': 'W', '94aa56a1': 'O'}
+[SeqClu] Iteration 1.
+[SeqClu] Current index of data is 40.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 2.
+[SeqClu] Current index of data is 41.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 3.
+[SeqClu] Current index of data is 42.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 4.
+[SeqClu] Current index of data is 43.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 5.
+[SeqClu] Current index of data is 44.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 6.
+[SeqClu] Current index of data is 45.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 7.
+[SeqClu] Current index of data is 46.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 8.
+[SeqClu] Current index of data is 47.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 9.
+[SeqClu] Current index of data is 48.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 10.
+[SeqClu] Current index of data is 49.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 11.
+[SeqClu] Current index of data is 50.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 12.
+[SeqClu] Current index of data is 51.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 13.
+[SeqClu] Current index of data is 52.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 14.
+[SeqClu] Current index of data is 53.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 15.
+[SeqClu] Current index of data is 54.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 16.
+[SeqClu] Current index of data is 55.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 17.
+[SeqClu] Current index of data is 56.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 18.
+[SeqClu] Current index of data is 57.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 19.
+[SeqClu] Current index of data is 58.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 20.
+[SeqClu] Current index of data is 59.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 21.
+[SeqClu] Current index of data is 60.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 22.
+[SeqClu] Current index of data is 61.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 23.
+[SeqClu] Current index of data is 62.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 24.
+[SeqClu] Current index of data is 63.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 25.
+[SeqClu] Current index of data is 64.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 26.
+[SeqClu] Current index of data is 65.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 27.
+[SeqClu] Current index of data is 66.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 28.
+[SeqClu] Current index of data is 67.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 29.
+[SeqClu] Current index of data is 68.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 30.
+[SeqClu] Current index of data is 69.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 31.
+[SeqClu] Current index of data is 70.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 32.
+[SeqClu] Current index of data is 71.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 33.
+[SeqClu] Current index of data is 72.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 34.
+[SeqClu] Current index of data is 73.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 35.
+[SeqClu] Current index of data is 74.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 36.
+[SeqClu] Current index of data is 75.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 37.
+[SeqClu] Current index of data is 76.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 38.
+[SeqClu] Current index of data is 77.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 39.
+[SeqClu] Current index of data is 78.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 40.
+[SeqClu] Current index of data is 79.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 41.
+[SeqClu] Current index of data is 80.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 42.
+[SeqClu] Current index of data is 81.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 43.
+[SeqClu] Current index of data is 82.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 44.
+[SeqClu] Current index of data is 83.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 45.
+[SeqClu] Current index of data is 84.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 46.
+[SeqClu] Current index of data is 85.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 47.
+[SeqClu] Current index of data is 86.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 48.
+[SeqClu] Current index of data is 87.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 49.
+[SeqClu] Current index of data is 88.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 50.
+[SeqClu] Current index of data is 89.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 51.
+[SeqClu] Current index of data is 90.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 52.
+[SeqClu] Current index of data is 91.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 53.
+[SeqClu] Current index of data is 92.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 54.
+[SeqClu] Current index of data is 93.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 55.
+[SeqClu] Current index of data is 94.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 56.
+[SeqClu] Current index of data is 95.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 57.
+[SeqClu] Current index of data is 96.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 58.
+[SeqClu] Current index of data is 97.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 59.
+[SeqClu] Current index of data is 98.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 60.
+[SeqClu] Current index of data is 99.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 61.
+[SeqClu] Current index of data is 100.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 62.
+[SeqClu] Current index of data is 101.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 63.
+[SeqClu] Current index of data is 102.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 64.
+[SeqClu] Current index of data is 103.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 65.
+[SeqClu] Current index of data is 104.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 66.
+[SeqClu] Current index of data is 105.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 67.
+[SeqClu] Current index of data is 106.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 68.
+[SeqClu] Current index of data is 107.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 69.
+[SeqClu] Current index of data is 108.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 70.
+[SeqClu] Current index of data is 109.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 71.
+[SeqClu] Current index of data is 110.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 72.
+[SeqClu] Current index of data is 111.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 73.
+[SeqClu] Current index of data is 112.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 74.
+[SeqClu] Current index of data is 113.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 75.
+[SeqClu] Current index of data is 114.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 76.
+[SeqClu] Current index of data is 115.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 77.
+[SeqClu] Current index of data is 116.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 78.
+[SeqClu] Current index of data is 117.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 79.
+[SeqClu] Current index of data is 118.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 80.
+[SeqClu] Current index of data is 119.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 81.
+[SeqClu] Current index of data is 120.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 82.
+[SeqClu] Current index of data is 121.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 83.
+[SeqClu] Current index of data is 122.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 84.
+[SeqClu] Current index of data is 123.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 85.
+[SeqClu] Current index of data is 124.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 86.
+[SeqClu] Current index of data is 125.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 87.
+[SeqClu] Current index of data is 126.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 88.
+[SeqClu] Current index of data is 127.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 89.
+[SeqClu] Current index of data is 128.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 90.
+[SeqClu] Current index of data is 129.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 91.
+[SeqClu] Current index of data is 130.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 92.
+[SeqClu] Current index of data is 131.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 93.
+[SeqClu] Current index of data is 132.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 94.
+[SeqClu] Current index of data is 133.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 95.
+[SeqClu] Current index of data is 134.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 96.
+[SeqClu] Current index of data is 135.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 97.
+[SeqClu] Current index of data is 136.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 98.
+[SeqClu] Current index of data is 137.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 99.
+[SeqClu] Current index of data is 138.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 100.
+[SeqClu] Current index of data is 139.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 101.
+[SeqClu] Current index of data is 140.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 102.
+[SeqClu] Current index of data is 141.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 103.
+[SeqClu] Current index of data is 142.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 104.
+[SeqClu] Current index of data is 143.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 105.
+[SeqClu] Current index of data is 144.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 106.
+[SeqClu] Current index of data is 145.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 107.
+[SeqClu] Current index of data is 146.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 108.
+[SeqClu] Current index of data is 147.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 109.
+[SeqClu] Current index of data is 148.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 110.
+[SeqClu] Current index of data is 149.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 111.
+[SeqClu] Current index of data is 150.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 112.
+[SeqClu] Current index of data is 151.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 113.
+[SeqClu] Current index of data is 152.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 114.
+[SeqClu] Current index of data is 153.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 115.
+[SeqClu] Current index of data is 154.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 116.
+[SeqClu] Current index of data is 155.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 117.
+[SeqClu] Current index of data is 156.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 118.
+[SeqClu] Current index of data is 157.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 119.
+[SeqClu] Current index of data is 158.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 120.
+[SeqClu] Current index of data is 159.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 121.
+[SeqClu] Current index of data is 160.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 122.
+[SeqClu] Current index of data is 161.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 123.
+[SeqClu] Current index of data is 162.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 124.
+[SeqClu] Current index of data is 163.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 125.
+[SeqClu] Current index of data is 164.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 126.
+[SeqClu] Current index of data is 165.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 127.
+[SeqClu] Current index of data is 166.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 128.
+[SeqClu] Current index of data is 167.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 129.
+[SeqClu] Current index of data is 168.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 130.
+[SeqClu] Current index of data is 169.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 131.
+[SeqClu] Current index of data is 170.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 132.
+[SeqClu] Current index of data is 171.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 133.
+[SeqClu] Current index of data is 172.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 134.
+[SeqClu] Current index of data is 173.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 135.
+[SeqClu] Current index of data is 174.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 136.
+[SeqClu] Current index of data is 175.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 137.
+[SeqClu] Current index of data is 176.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] The algorithm finished executing. Processing the buffer and returning...
+[SeqCluBaselineOnline] The results of the implementation of SeqCluBaselineOnline are as follows.
+[SeqCluBaselineOnline] The result provided by the 'SeqCluBaselineOnline' algorithm is as follows.
+{'f0881bae': 'O', '6b5e11b4': 'O', '3977b9db': 'O', 'e659dff6': 'O', '94aa56a1': 'O', '7e1a26ed': 'O', '9c479a03': 'O', '73da52af': 'O', '482fed89': '2', '1085e61d': '2', '76c30e17': '2', '472b7fc1': '2', '24acc8e9': '2', '93a1ddc9': '2', '1332e09f': '2', '7913451a': '2', '69a451fd': '9', '03f9a7c2': '9', 'afb084b9': '9', '7b8a937e': '9', '52eafac6': '9', '1a9e2f84': '9', '7b3de861': '9', 'e6156839': '9', '1a525726': '5', '21b7fd73': '5', 'eb1468b0': '5', 'e921b17e': '5', 'bbfa3eb0': '5', '77d9cb4e': '5', 'c417498f': '5', '3b071a8b': '5', '78ae25b3': 'W', 'eb657780': 'W', '89a684ef': 'W', 'dae0ad4f': 'W', '4f8ec214': 'W', '7c4cd0d9': 'W', '199e6dc7': 'W', 'cdf3709b': 'W', 'e9faa4cc': '5', '3f0aa84b': '5', '37a6ada9': '2', '396fca49': '2', '74f89b04': 'O', '4d52ec11': 'O', '3e712c3b': 'O', 'cb30c29c': '5', 'e0b646d4': '2', 'c326d118': 'O', '1d7d1496': 'O', 'adb1ff2e': 'O', '47d34cbb': 'O', 'cedcc413': '9', 'ac173cf3': 'O', '50969267': 'O', '43a42008': 'O', '89234e21': '2', '2ca204ac': '2', '352889ef': 'O', '06e40d21': 'O', '2ef44daf': 'W', '8dac6101': 'W', '715332c9': 'O', '295ff276': 'W', '9809d07f': '2', '933deba4': 'W', 'ba6e7c4a': 'W', '2a64efc4': 'O', '8df29f81': 'O', 'a0e0db58': 'O', 'c0176f15': 'O', '7ce0fa09': '9', 'f418fa11': '9', '3ead38b7': '2', '4e2aa915': 'W', 'd29216c8': '2', 'b784c4b6': 'O', '2beceec1': 'O', '7a2e4832': 'O', 'b21c84cb': '2', 'bc2f57a1': 'W', '6e6e22ef': 'W', '7a77582d': 'O', '4ccb3dd9': '9', '3162588d': 'O', '73691a6b': 'O', '6126b9c9': 'O', 'd6d1473c': 'O', '6f193b31': 'O', '797a825c': 'W', '449dbb2e': 'W', '1b1f4e89': '2', 'a37c250f': '2', '4eb1df54': 'W', '80666255': 'W', 'ef4f8324': 'W', '0b371e7d': '5', 'bde6d686': 'O', 'cad8a262': 'O', 'bde8aa4e': 'O', '8d9c8fc1': 'W', '7420af12': 'O', 'a1264b54': 'O', '264ed0d0': 'O', 'cc0a3483': 'O', 'b74c2b1c': 'W', '29d8b0f5': 'O', 'efeedd1f': 'O', 'dfec2275': 'O', 'bdf4fda1': 'O', 'fa61df8d': '9', 'b81c59f8': 'W', '2ca3d5cc': 'W', '0755e139': '9', '1fcd376a': 'O', 'a7fe6878': '2', '0f79569b': 'O', 'beeebf86': '9', '75ebc5d9': 'O', '677f5e8b': '2', 'e36aa35d': 'O', 'e75c9aab': '2', 'edcd0ecc': '2', '03b429ad': 'W', '3002d3e1': 'O', 'dc24ab44': 'W', '349725c2': 'W', 'c3999a82': '9', '07d5a3ee': '9', 'ccbf955f': 'W', '6756bc76': 'O', '4f838114': 'O', 'bf78cd68': '2', '41cf05ef': '2', 'a2c79076': '9', '0a10826d': 'O', '7b41ff90': '2', 'c590f4da': 'O', 'b3c5643c': '2', '8d0e88b3': '2', 'f3453d3c': 'O', 'bd3f48df': 'O', '28ebbe0b': 'O', '8a130fb7': 'W', '6b2cde41': 'W', '16ff79cb': 'O', '84754bea': '2', '4ef8ba57': 'O', '966109b0': 'O', '17fc021f': 'O', '5ac133ba': 'O', '34f40742': 'O', '23d1ab56': 'O', '49b38b7f': 'O', '2e06ec79': '9', '4ef46c45': 'O', 'a428da62': 'W', '2ac321dd': 'O', '473d46b8': 'O', 'd8db634f': '2', '4cd6f30f': 'W', 'e43d7d4f': 'W', 'c64b021a': 'O', '0dd66cc3': '9', '4e152017': 'W', 'cda22c0d': 'O', 'c2e5bc3b': 'O', 'ff24fe7c': 'O', '31d1966f': 'W', '2becc972': '2', 'ef7ca957': '2', '8ac4d5be': '9', 'f08aaf85': 'O', '2371c6a2': 'W', '859a6067': 'O'}
+[SeqCluBaselineOnline] The amount of labels provided is 176.
+[SeqCluBaselineOnline] The amount of correct predictions is 150.
+[SeqClu] The algorithm made 26 out of 176 mistakes.
+[SeqClu] The amount of times the distance computation has been called is 5580.
+[SeqClu] the SeqCluBaselineOnline algorithm took 87.4310281 seconds to complete.
+[SeqClu] The clustering accuracy is therefore 0.8522727272727273
+[SeqClu] The F1 score (macro) is 0.8200567462126969
+[SeqClu] The F1 score (micro) is 0.8522727272727273
+[SeqClu] The F1 score (weighted) is 0.8486465774940467
+[SeqClu] The prototype hashes are [['9c479a03', '73da52af', '7e1a26ed', 'e659dff6', 'f0881bae', '3977b9db', '6b5e11b4', '94aa56a1'], ['482fed89', '76c30e17', '472b7fc1', '1332e09f', '7913451a', '24acc8e9', '93a1ddc9', '1085e61d'], ['69a451fd', '03f9a7c2', 'afb084b9', '7b8a937e', '7b3de861', 'e6156839', '1a9e2f84', '52eafac6'], ['1a525726', 'eb1468b0', 'e921b17e', 'bbfa3eb0', '77d9cb4e', 'c417498f', '3b071a8b', '21b7fd73'], ['4f8ec214', 'eb657780', '89a684ef', '7c4cd0d9', 'cdf3709b', '78ae25b3', 'dae0ad4f', '199e6dc7']]
+[SeqCluCSV] 5580,87.4310281,0.8522727272727273,0.8200567462126969,0.8522727272727273,0.8486465774940467
+[SeqClu] PrototypeAccuracy 0.35
+[SeqClu] Iteration 1.
+[SeqClu] Current index of data is 0.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 2.
+[SeqClu] Current index of data is 1.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 3.
+[SeqClu] Current index of data is 2.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 2 with 3 and 0
+[SeqClu] Iteration 4.
+[SeqClu] Current index of data is 3.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 3 with 3 and 1
+[SeqClu] Iteration 5.
+[SeqClu] Current index of data is 4.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 4 with 3 and 2
+[SeqClu] Iteration 6.
+[SeqClu] Current index of data is 5.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 5 with 3 and 3
+[SeqClu] Iteration 7.
+[SeqClu] Current index of data is 6.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 6 with 3 and 4
+[SeqClu] Iteration 8.
+[SeqClu] Current index of data is 7.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 7 with 3 and 5
+[SeqClu] Prototypes have been fully initialized at tick 7 with 3 and 5
+[SeqClu] Iteration 9.
+[SeqClu] Current index of data is 8.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 10.
+[SeqClu] Current index of data is 9.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 11.
+[SeqClu] Current index of data is 10.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 10 with 3 and 0
+[SeqClu] Iteration 12.
+[SeqClu] Current index of data is 11.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 11 with 3 and 1
+[SeqClu] Iteration 13.
+[SeqClu] Current index of data is 12.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 12 with 3 and 2
+[SeqClu] Iteration 14.
+[SeqClu] Current index of data is 13.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 13 with 3 and 3
+[SeqClu] Iteration 15.
+[SeqClu] Current index of data is 14.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 14 with 3 and 4
+[SeqClu] Iteration 16.
+[SeqClu] Current index of data is 15.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 15 with 3 and 5
+[SeqClu] Prototypes have been fully initialized at tick 15 with 3 and 5
+[SeqClu] Iteration 17.
+[SeqClu] Current index of data is 16.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 18.
+[SeqClu] Current index of data is 17.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 19.
+[SeqClu] Current index of data is 18.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 18 with 3 and 0
+[SeqClu] Iteration 20.
+[SeqClu] Current index of data is 19.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 19 with 3 and 1
+[SeqClu] Iteration 21.
+[SeqClu] Current index of data is 20.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 20 with 3 and 2
+[SeqClu] Iteration 22.
+[SeqClu] Current index of data is 21.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 21 with 3 and 3
+[SeqClu] Iteration 23.
+[SeqClu] Current index of data is 22.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 22 with 3 and 4
+[SeqClu] Iteration 24.
+[SeqClu] Current index of data is 23.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 23 with 3 and 5
+[SeqClu] Prototypes have been fully initialized at tick 23 with 3 and 5
+[SeqClu] Iteration 25.
+[SeqClu] Current index of data is 24.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 26.
+[SeqClu] Current index of data is 25.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 27.
+[SeqClu] Current index of data is 26.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 26 with 3 and 0
+[SeqClu] Iteration 28.
+[SeqClu] Current index of data is 27.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 27 with 3 and 1
+[SeqClu] Iteration 29.
+[SeqClu] Current index of data is 28.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 28 with 3 and 2
+[SeqClu] Iteration 30.
+[SeqClu] Current index of data is 29.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 29 with 3 and 3
+[SeqClu] Iteration 31.
+[SeqClu] Current index of data is 30.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 30 with 3 and 4
+[SeqClu] Iteration 32.
+[SeqClu] Current index of data is 31.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 31 with 3 and 5
+[SeqClu] Prototypes have been fully initialized at tick 31 with 3 and 5
+[SeqClu] Iteration 33.
+[SeqClu] Current index of data is 32.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 34.
+[SeqClu] Current index of data is 33.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Iteration 35.
+[SeqClu] Current index of data is 34.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 34 with 3 and 0
+[SeqClu] Iteration 36.
+[SeqClu] Current index of data is 35.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 35 with 3 and 1
+[SeqClu] Iteration 37.
+[SeqClu] Current index of data is 36.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 36 with 3 and 2
+[SeqClu] Iteration 38.
+[SeqClu] Current index of data is 37.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 37 with 3 and 3
+[SeqClu] Iteration 39.
+[SeqClu] Current index of data is 38.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 38 with 3 and 4
+[SeqClu] Iteration 40.
+[SeqClu] Current index of data is 39.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Prototypes have been representative initialized at tick 39 with 3 and 5
+[SeqClu] Prototypes have been fully initialized at tick 39 with 3 and 5
+[SeqClu] Iteration 41.
+[SeqClu] Current index of data is 40.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 42.
+[SeqClu] Current index of data is 41.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 43.
+[SeqClu] Current index of data is 42.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 44.
+[SeqClu] Current index of data is 43.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 45.
+[SeqClu] Current index of data is 44.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 46.
+[SeqClu] Current index of data is 45.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 47.
+[SeqClu] Current index of data is 46.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 48.
+[SeqClu] Current index of data is 47.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 2, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 49.
+[SeqClu] Current index of data is 48.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 50.
+[SeqClu] Current index of data is 49.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 51.
+[SeqClu] Current index of data is 50.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 52.
+[SeqClu] Current index of data is 51.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 53.
+[SeqClu] Current index of data is 52.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 54.
+[SeqClu] Current index of data is 53.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 55.
+[SeqClu] Current index of data is 54.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 56.
+[SeqClu] Current index of data is 55.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 57.
+[SeqClu] Current index of data is 56.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 58.
+[SeqClu] Current index of data is 57.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 59.
+[SeqClu] Current index of data is 58.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 60.
+[SeqClu] Current index of data is 59.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 61.
+[SeqClu] Current index of data is 60.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 62.
+[SeqClu] Current index of data is 61.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 63.
+[SeqClu] Current index of data is 62.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 64.
+[SeqClu] Current index of data is 63.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 65.
+[SeqClu] Current index of data is 64.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 66.
+[SeqClu] Current index of data is 65.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 67.
+[SeqClu] Current index of data is 66.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 68.
+[SeqClu] Current index of data is 67.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 69.
+[SeqClu] Current index of data is 68.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 70.
+[SeqClu] Current index of data is 69.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 71.
+[SeqClu] Current index of data is 70.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 72.
+[SeqClu] Current index of data is 71.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 73.
+[SeqClu] Current index of data is 72.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 74.
+[SeqClu] Current index of data is 73.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 75.
+[SeqClu] Current index of data is 74.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 76.
+[SeqClu] Current index of data is 75.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 77.
+[SeqClu] Current index of data is 76.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 78.
+[SeqClu] Current index of data is 77.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 79.
+[SeqClu] Current index of data is 78.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 80.
+[SeqClu] Current index of data is 79.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 81.
+[SeqClu] Current index of data is 80.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 82.
+[SeqClu] Current index of data is 81.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 83.
+[SeqClu] Current index of data is 82.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 84.
+[SeqClu] Current index of data is 83.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 85.
+[SeqClu] Current index of data is 84.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 86.
+[SeqClu] Current index of data is 85.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 87.
+[SeqClu] Current index of data is 86.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 88.
+[SeqClu] Current index of data is 87.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 89.
+[SeqClu] Current index of data is 88.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 90.
+[SeqClu] Current index of data is 89.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 91.
+[SeqClu] Current index of data is 90.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 92.
+[SeqClu] Current index of data is 91.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 93.
+[SeqClu] Current index of data is 92.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 94.
+[SeqClu] Current index of data is 93.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 95.
+[SeqClu] Current index of data is 94.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 96.
+[SeqClu] Current index of data is 95.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 97.
+[SeqClu] Current index of data is 96.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 98.
+[SeqClu] Current index of data is 97.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 99.
+[SeqClu] Current index of data is 98.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 100.
+[SeqClu] Current index of data is 99.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 101.
+[SeqClu] Current index of data is 100.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 102.
+[SeqClu] Current index of data is 101.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 103.
+[SeqClu] Current index of data is 102.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 104.
+[SeqClu] Current index of data is 103.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 105.
+[SeqClu] Current index of data is 104.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 106.
+[SeqClu] Current index of data is 105.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 107.
+[SeqClu] Current index of data is 106.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 108.
+[SeqClu] Current index of data is 107.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 109.
+[SeqClu] Current index of data is 108.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 110.
+[SeqClu] Current index of data is 109.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 111.
+[SeqClu] Current index of data is 110.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 112.
+[SeqClu] Current index of data is 111.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 113.
+[SeqClu] Current index of data is 112.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 114.
+[SeqClu] Current index of data is 113.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 115.
+[SeqClu] Current index of data is 114.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 116.
+[SeqClu] Current index of data is 115.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 117.
+[SeqClu] Current index of data is 116.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 118.
+[SeqClu] Current index of data is 117.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 119.
+[SeqClu] Current index of data is 118.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 120.
+[SeqClu] Current index of data is 119.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 121.
+[SeqClu] Current index of data is 120.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 122.
+[SeqClu] Current index of data is 121.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 123.
+[SeqClu] Current index of data is 122.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 124.
+[SeqClu] Current index of data is 123.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 125.
+[SeqClu] Current index of data is 124.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 126.
+[SeqClu] Current index of data is 125.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 127.
+[SeqClu] Current index of data is 126.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 128.
+[SeqClu] Current index of data is 127.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 129.
+[SeqClu] Current index of data is 128.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 130.
+[SeqClu] Current index of data is 129.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 131.
+[SeqClu] Current index of data is 130.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 132.
+[SeqClu] Current index of data is 131.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 133.
+[SeqClu] Current index of data is 132.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [1, 2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 134.
+[SeqClu] Current index of data is 133.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 135.
+[SeqClu] Current index of data is 134.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 136.
+[SeqClu] Current index of data is 135.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 137.
+[SeqClu] Current index of data is 136.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 138.
+[SeqClu] Current index of data is 137.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 139.
+[SeqClu] Current index of data is 138.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 140.
+[SeqClu] Current index of data is 139.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 141.
+[SeqClu] Current index of data is 140.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 142.
+[SeqClu] Current index of data is 141.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 143.
+[SeqClu] Current index of data is 142.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 144.
+[SeqClu] Current index of data is 143.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 145.
+[SeqClu] Current index of data is 144.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 146.
+[SeqClu] Current index of data is 145.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 147.
+[SeqClu] Current index of data is 146.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 148.
+[SeqClu] Current index of data is 147.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 149.
+[SeqClu] Current index of data is 148.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 150.
+[SeqClu] Current index of data is 149.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 151.
+[SeqClu] Current index of data is 150.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 152.
+[SeqClu] Current index of data is 151.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 153.
+[SeqClu] Current index of data is 152.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 154.
+[SeqClu] Current index of data is 153.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 155.
+[SeqClu] Current index of data is 154.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 156.
+[SeqClu] Current index of data is 155.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 157.
+[SeqClu] Current index of data is 156.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 158.
+[SeqClu] Current index of data is 157.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 159.
+[SeqClu] Current index of data is 158.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 160.
+[SeqClu] Current index of data is 159.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3, 4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 161.
+[SeqClu] Current index of data is 160.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 162.
+[SeqClu] Current index of data is 161.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 163.
+[SeqClu] Current index of data is 162.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 164.
+[SeqClu] Current index of data is 163.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [0, 3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 165.
+[SeqClu] Current index of data is 164.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 166.
+[SeqClu] Current index of data is 165.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 167.
+[SeqClu] Current index of data is 166.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 168.
+[SeqClu] Current index of data is 167.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 169.
+[SeqClu] Current index of data is 168.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 170.
+[SeqClu] Current index of data is 169.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [3].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 171.
+[SeqClu] Current index of data is 170.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 172.
+[SeqClu] Current index of data is 171.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 173.
+[SeqClu] Current index of data is 172.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 174.
+[SeqClu] Current index of data is 173.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [2].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 175.
+[SeqClu] Current index of data is 174.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [4].
+[SeqClu] Forcefully emptying buffer...
+[SeqClu] Updating prototypes...
+[SeqClu] Iteration 176.
+[SeqClu] Current index of data is 175.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] Candidacy determined [].
+[SeqClu] Iteration 177.
+[SeqClu] Current index of data is 176.
+[SeqClu] The number of elements that will be processed in this iteration is 1.
+[SeqClu] The algorithm finished executing. Processing the buffer and returning...
+[SeqClu] Buffered sequences are set()
+[SeqClu] Sequences clustered by approximation are {'f0881bae', 'c2e5bc3b', 'c0176f15', 'd29216c8', '8d9c8fc1', '3162588d', 'cc0a3483', '859a6067', '1b1f4e89', '43a42008', '449dbb2e', '03b429ad', 'dae0ad4f', 'ccbf955f', '6b5e11b4', 'beeebf86', '4eb1df54', '23d1ab56', '8df29f81', '16ff79cb', '199e6dc7', 'a37c250f', '7c4cd0d9', 'e659dff6', 'ac173cf3', '2beceec1', '49b38b7f', '2371c6a2', '7a77582d', '6f193b31', 'cda22c0d', 'c590f4da', 'fa61df8d', 'ba6e7c4a', '966109b0', '9809d07f', '2ac321dd', '677f5e8b', '73da52af', '31d1966f', '349725c2', '3977b9db', '4ef46c45', 'e0b646d4', '78ae25b3', '4e152017', 'b81c59f8', '8ac4d5be', 'e75c9aab', 'a428da62', '7b41ff90', 'a7fe6878', 'dc24ab44', '8d0e88b3', 'f3453d3c', '3ead38b7', '17fc021f', '6126b9c9', '41cf05ef', 'cad8a262', 'e36aa35d'}
+[SeqClu] The results of the implementation of SeqClu are as follows.
+[SeqClu] The result provided by the 'SeqClu' algorithm is as follows.
+{'3f0aa84b': '5', 'cedcc413': '9', '396fca49': '9', '4d52ec11': 'O', '3e712c3b': 'O', 'cb30c29c': '2', 'e0b646d4': '2', 'c326d118': 'O', '24acc8e9': '9', '74f89b04': 'O', '1d7d1496': 'O', '2ef44daf': 'W', '47d34cbb': 'W', '03f9a7c2': '9', '7b3de861': '9', 'ac173cf3': 'O', '933deba4': 'W', '50969267': 'W', '43a42008': 'O', '2ca204ac': '2', '295ff276': 'W', '352889ef': 'W', 'bc2f57a1': 'W', '06e40d21': 'W', '8dac6101': 'W', '715332c9': 'W', '73da52af': 'O', '797a825c': 'W', 'eb657780': 'W', '9809d07f': '2', 'ba6e7c4a': 'W', '8df29f81': 'W', 'a0e0db58': 'W', 'c0176f15': 'O', 'f418fa11': 'O', '3ead38b7': '2', '80666255': 'W', '4e2aa915': 'W', 'd29216c8': '2', 'b784c4b6': 'O', '2beceec1': 'O', '7a2e4832': 'W', 'b21c84cb': '9', '6e6e22ef': 'W', '7a77582d': 'O', '4ccb3dd9': '9', '3162588d': 'O', '89a684ef': 'W', '7e1a26ed': 'O', '6126b9c9': 'O', 'e9faa4cc': '5', 'd6d1473c': '5', '6f193b31': 'O', '449dbb2e': 'W', '1b1f4e89': '2', 'a37c250f': '2', '4eb1df54': 'W', 'ef4f8324': 'W', '0b371e7d': '5', 'bde6d686': 'O', 'cad8a262': 'O', 'eb1468b0': '5', 'bde8aa4e': '5', '8d9c8fc1': 'W', 'c417498f': '5', 'a1264b54': '5', '3b071a8b': '5', '264ed0d0': '5', 'cc0a3483': 'O', 'b74c2b1c': 'W', '69a451fd': '9', '29d8b0f5': '9', '7c4cd0d9': 'W', '1a525726': '5', 'efeedd1f': '5', 'dfec2275': 'O', 'bdf4fda1': 'O', 'fa61df8d': '9', 'b81c59f8': 'W', '2ca3d5cc': 'W', '0755e139': '9', '1fcd376a': '5', 'a7fe6878': '2', '0f79569b': 'O', 'beeebf86': '9', '75ebc5d9': 'O', 'e6156839': '9', '677f5e8b': '2', 'e36aa35d': 'O', 'e75c9aab': '2', 'edcd0ecc': '9', '03b429ad': 'W', 'bbfa3eb0': '5', '3002d3e1': '5', 'dc24ab44': 'W', 'cdf3709b': 'W', '349725c2': 'W', '7ce0fa09': '9', '07d5a3ee': '9', 'e659dff6': 'O', 'ccbf955f': 'W', '4f838114': 'O', '37a6ada9': '2', '93a1ddc9': '2', '41cf05ef': '2', '1a9e2f84': '2', '77d9cb4e': '5', '0a10826d': '5', '7b41ff90': '2', 'c590f4da': 'O', 'b3c5643c': '9', '8d0e88b3': '2', 'f3453d3c': 'O', 'bd3f48df': '5', '28ebbe0b': 'O', '8a130fb7': 'W', '6b2cde41': 'W', '16ff79cb': 'O', '84754bea': '9', '4ef8ba57': 'O', '966109b0': 'O', '17fc021f': 'O', 'f0881bae': 'O', '34f40742': 'O', '23d1ab56': 'O', '49b38b7f': 'O', '2e06ec79': '9', '4ef46c45': 'O', 'a428da62': 'W', '2ac321dd': 'O', '78ae25b3': 'W', '473d46b8': 'O', 'd8db634f': '9', 'e43d7d4f': 'W', '3977b9db': 'O', 'adb1ff2e': 'O', 'c64b021a': '5', '0dd66cc3': '9', '4e152017': 'W', '6b5e11b4': 'O', 'cda22c0d': 'O', '21b7fd73': '5', 'c2e5bc3b': 'O', 'ff24fe7c': '5', '31d1966f': 'W', '2becc972': '9', 'ef7ca957': '2', '8ac4d5be': '5', 'dae0ad4f': 'W', 'f08aaf85': 'O', '52eafac6': '9', '2371c6a2': 'W', '859a6067': 'O', '1085e61d': '9', '199e6dc7': 'W', '94aa56a1': 'O', '2a64efc4': 'O', '6756bc76': 'O', '5ac133ba': 'O', '7420af12': 'O', '73691a6b': 'O', '9c479a03': 'O', '1332e09f': '2', '7913451a': '2', '89234e21': '2', 'bf78cd68': '2', '482fed89': '2', '472b7fc1': '2', '76c30e17': '2', 'a2c79076': '9', 'c3999a82': '9', '7b8a937e': '9', 'afb084b9': '9', 'e921b17e': '5', '4cd6f30f': 'W', '4f8ec214': 'W'}
+[SeqClu] The amount of labels provided is 176.
+[SeqClu] The amount of correct predictions is 143.
+[SeqClu] The algorithm made 33 out of 176 mistakes.
+[SeqClu] The amount of times the distance computation has been called is 3567.
+[SeqClu] the SeqClu algorithm took 54.6507831 seconds to complete.
+[SeqClu] The clustering accuracy is therefore 0.8125
+[SeqClu] The F1 score (macro) is 0.7808552479788871
+[SeqClu] The F1 score (micro) is 0.8125
+[SeqClu] The F1 score (weighted) is 0.8139468709655396
+[SeqClu] The prototype hashes are [['7e1a26ed', '2a64efc4', 'c64b021a', '6756bc76', '5ac133ba', '7420af12', '73691a6b', '9c479a03'], ['93a1ddc9', '1332e09f', '7913451a', '89234e21', 'bf78cd68', '482fed89', '472b7fc1', '76c30e17'], ['d8db634f', '29d8b0f5', '07d5a3ee', 'a2c79076', '7b3de861', 'c3999a82', '7b8a937e', 'afb084b9'], ['bd3f48df', '264ed0d0', '3002d3e1', 'd6d1473c', 'a1264b54', 'c64b021a', 'ff24fe7c', 'e921b17e'], ['47d34cbb', '7a2e4832', '50969267', '4e2aa915', 'eb657780', '89a684ef', '4cd6f30f', '4f8ec214']]
+[SeqCluCSV] 3567,54.6507831,0.8125,0.7808552479788871,0.8125,0.8139468709655396
+[SeqClu] Approximation: 0.9180327868852459,0.0,0.01639344262295082
+[SeqClu] PrototypeAccuracy 0.4
